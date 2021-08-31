@@ -1,0 +1,50 @@
+invk strmfl
+
+model person {
+    fntn describe :: (&self) => (bare);
+}
+
+group user (var name: str, var surname: str, var age: int) {
+    @@ here come only the secondary constructors
+}
+
+let user grow {
+    @@ separate different layers of parameters using pipe operator
+    fntn new :: (&self | name_, surname_: str, age_: int) => (user) {
+        user(curr(name, surname, age) = (name_, surname_, age_))
+    }
+
+    fntn prtuser :: (&self) => (bare) {
+        println("name: %s, surname: %s, age: %d", 
+            curr(name, surname, age)
+        );
+    }
+}
+
+@@ implement person interface for user struct
+let user follow person {
+    fntn describe :: (&self) => (bare) {
+        println("My name is %s %s and I am %d years old", curr(self.surname, self.name, self.age));
+    }
+}
+
+fntn gcd :: (a, b: int) => (int) {
+    if ~ b iseq 0 ~ a
+    else gcd (b, a % b)
+}
+
+fntn main :: (argc: int, argv: Vec<str>) => (bare) {
+    &(name, surname, age, years) ::< strmfl.IO("%s%s%d%d", stdin);
+    var usr: user = user::new(name, surname, age) |gt| it.prtuser();
+    
+    @@ closure
+    let rejuvenate = |gt years, st usr| :: (bare) => (bare) {
+        if ~ years > usr.age ~ Err("Failed to rejuvenate user") ::> strmfl.IO("%s", stderr);
+        else usr.age -= years;
+    }();
+    usr.describe();
+
+    &(a, b) ::< strmfl.IO("%d%d", stdin);
+    val c = gcd(a, b);
+    println("%d", c);
+}
