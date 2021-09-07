@@ -1,4 +1,5 @@
 invk strmfl
+invk std::vec
 
 model person {
     fntn describe :: (&self) => (bare);
@@ -43,6 +44,25 @@ fntn main :: (argc: int, argv: Vec<str>) => (bare) {
         else usr.age -= years;
     }();
     usr.describe();
+
+    @@ array usage
+    let store = int[3];
+    let mutate_store = |st store| :: (i: int | i in {0, 1, 2}) => (bare) {
+        store[i] = i + 1;
+    }();
+
+    for ~ let i = 0; i < len(store); i++ ~ {
+        println("%d", store[i]);
+    }
+
+    var arr: Vec<str> = Vec::new();
+    arr.push(1);
+    arr.push(2);
+    arr.push(3);
+
+    for ~ item in arr ~ {
+        println("%d", item);
+    }
 
     &(a, b) ::< strmfl.IO("%d%d", stdin);
     val c = gcd(a, b);
