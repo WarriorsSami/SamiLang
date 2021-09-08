@@ -23,7 +23,7 @@ samilang::lexer::TokenType samilang::lexer::Token::getType() const {
     return type;
 }
 
-const std::string &samilang::lexer::Token::getValue() const {
+const std::string_view &samilang::lexer::Token::getValue() const {
     return value;
 }
 
@@ -45,17 +45,17 @@ void samilang::lexer::Token::setType(samilang::lexer::TokenType type) {
     this->type = type;
 }
 
-void samilang::lexer::Token::setValue(const std::string &value) {
+void samilang::lexer::Token::setValue(const std::string_view &value) {
     this->value = value;
 }
 
 samilang::lexer::Token::Token(
         std::pair<int64_t, int64_t> position,
         samilang::lexer::TokenType type,
-        std::string value
+        std::string_view value
 ): position(std::move(position)), type(type), value(std::move(value)) {}
 
-std::string samilang::lexer::Token::tokenTypeToStr() {
+std::string_view samilang::lexer::Token::tokenTypeToStr() {
     switch(this->type) {
 
         case TOK_INT: return "TOK_INT";

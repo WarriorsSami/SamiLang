@@ -123,14 +123,14 @@ namespace samilang::lexer {
     };
 
     // values for tokens
-    extern vector<string> TokenStrings(TOK_LAST);
+    extern vector<string_view> TokenStrings(TOK_LAST);
 
     // Token struct
     class Token {
     public:
 
         // class management
-        Token(pair<int64_t, int64_t> position, TokenType type, string value);
+        Token(pair<int64_t, int64_t> position, TokenType type, string_view value);
 
         const pair<int64_t, int64_t> &getPosition() const;
 
@@ -140,7 +140,7 @@ namespace samilang::lexer {
 
         TokenType getType() const;
 
-        const string &getValue() const;
+        const string_view &getValue() const;
 
         void setPosition(const pair<int64_t, int64_t> &position);
 
@@ -150,16 +150,16 @@ namespace samilang::lexer {
 
         void setType(TokenType type);
 
-        void setValue(const string &value);
+        void setValue(const string_view &value);
 
 
         // fundamental functionality
-        string tokenTypeToStr();
+        string_view tokenTypeToStr();
 
     private:
         pair<int64_t, int64_t> position;
         TokenType type;
-        string value;
+        string_view value;
     };
 
     using toks = vector<Token>;
