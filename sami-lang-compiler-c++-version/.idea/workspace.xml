@@ -13,6 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3a82ec21-af6a-4726-927a-002311970a51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../example.sm" beforeDir="false" afterPath="$PROJECT_DIR$/../example.sm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lexer/include/token.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/include/token.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lexer/lib/token.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lib/token.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="lexer" />
-                    <option name="lastUsedInstant" value="1631090025" />
+                    <option name="lastUsedInstant" value="1631115900" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -98,7 +101,7 @@
       <updated>1631035162083</updated>
       <workItem from="1631035168305" duration="1242000" />
       <workItem from="1631089943018" duration="4871000" />
-      <workItem from="1631115218879" duration="732000" />
+      <workItem from="1631115218879" duration="4893000" />
     </task>
     <servers />
   </component>

@@ -18,6 +18,7 @@ namespace samilang::lexer {
         TOK_BOOL,
         TOK_FLOAT,
         TOK_STR,
+        TOK_BARE,
 
         // identifier
         TOK_IDEN,
@@ -48,7 +49,6 @@ namespace samilang::lexer {
         TOK_WHILE,
         TOK_CONTINUE,
         TOK_BREAK,
-        TOK_BARE,
         TOK_TRUE,
         TOK_FALSE,
 
@@ -62,6 +62,8 @@ namespace samilang::lexer {
         TOK_DIV_ASSIGN,
         TOK_MOD_ASSIGN,
         TOK_PWR_ASSIGN,
+        TOK_SHL_ASSIGN,
+        TOK_SHR_ASSIGN,
         TOK_AND_ASSIGN,
         TOK_OR_ASSIGN,
         TOK_XOR_ASSIGN,
@@ -120,14 +122,14 @@ namespace samilang::lexer {
         TOK_LINE_COMMENT,
         TOK_LMLINE_COMMENT,
         TOK_RMLINE_COMMENT,
+        TOK_SPC,
+        TOK_TAB,
+        TOK_NEWL,
 
-        TOK_INVALID,
+        TOK_LAST,
 
-        TOK_LAST
+        TOK_INVALID
     };
-
-    // values for tokens
-    extern vector<string_view> TokenStrings(TOK_LAST);
 
     // Token struct
     class Token {
@@ -137,28 +139,30 @@ namespace samilang::lexer {
         Token(pair<int64_t, int64_t> position, TokenType type, string_view value);
 
         const pair<int64_t, int64_t> &getPosition() const;
-
         const int64_t &getLine() const;
-
         const int64_t &getColumn() const;
-
         TokenType getType() const;
-
         const string_view &getValue() const;
 
         void setPosition(const pair<int64_t, int64_t> &position);
-
         void setLine(const int64_t &line);
-
         void setColumn(const int64_t& column);
-
         void setType(TokenType type);
-
         void setValue(const string_view &value);
 
 
         // fundamental functionality
-        string_view tokenTypeToStr();
+        string tokenTypeToStr() const;
+        char* tokenToStr() const;
+
+        bool isData() const;
+        bool isAssignment() const;
+        bool isOperator() const;
+        bool is(TokenType t) const;
+        bool isNot(TokenType t) const;
+
+        template<typename ...T>
+        bool isAny(TokenType t1, TokenType t2, T... targs) const;
 
     private:
         pair<int64_t, int64_t> position;

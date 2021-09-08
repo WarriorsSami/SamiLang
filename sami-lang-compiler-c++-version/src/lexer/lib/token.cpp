@@ -4,7 +4,117 @@
 
 #include <utility>
 #include <string>
+#include <cstdio>
+#include <cstring>
+#include <vector>
 #include "../include/token.hpp"
+
+namespace samilang::lexer {
+    std::vector<std::string_view> TokenTypeValues = {
+        "INT",
+        "BOOL",
+        "FLOAT",
+        "STR",
+        "bare",
+
+        "IDEN",
+
+        "int",
+        "bool",
+        "float",
+        "str",
+        "invk",
+        "model",
+        "fntn",
+        "group",
+        "let",
+        "follow",
+        "grow",
+        "self",
+        "var",
+        "val",
+        "curr",
+        "return",
+        "gt",
+        "st",
+        "if",
+        "else",
+        "for",
+        "in",
+        "while",
+        "continue",
+        "break",
+        "true",
+        "false",
+
+        "=",
+        "+=",
+        "-=",
+        "*=",
+        "/=",
+        "%=",
+        "**=",
+        "<<=",
+        ">>=",
+        "&=",
+        "|=",
+        "^=",
+
+        "->",
+        "=>",
+        ":",
+        "::",
+        ";",
+        ",",
+        "|",
+        ".",
+
+        "+",
+        "-",
+        "*",
+        "/",
+        "%",
+        "**",
+        ">",
+        "<",
+        ">=",
+        "<=",
+
+        "==",
+        "!=",
+        "&&",
+        "||",
+        "!",
+
+        "&",
+        "|",
+        "^",
+        "~",
+        "<<",
+        ">>",
+
+        "(",
+        ")",
+        "{",
+        "}",
+        "[",
+        "]",
+        "<",
+        ">",
+        "~",
+        "~",
+
+        "&",
+        "@@",
+        "/@",
+        "@/",
+        "SPC",
+        "TAB",
+        "NEWL",
+
+        "<EOF>"
+    };
+};
 
 // Getters for Token class
 const std::pair<long, long> &samilang::lexer::Token::getPosition() const {
@@ -53,9 +163,9 @@ samilang::lexer::Token::Token(
         std::pair<int64_t, int64_t> position,
         samilang::lexer::TokenType type,
         std::string_view value
-): position(std::move(position)), type(type), value(std::move(value)) {}
+): position(std::move(position)), type(type), value(value) {}
 
-std::string_view samilang::lexer::Token::tokenTypeToStr() {
+std::string samilang::lexer::Token::tokenTypeToStr() const {
     switch(this->type) {
 
         case TOK_INT: return "TOK_INT";
@@ -234,7 +344,52 @@ std::string_view samilang::lexer::Token::tokenTypeToStr() {
             break;
         case TOK_KSTR: return "TOK_KSTR";
             break;
+        case TOK_SHL_ASSIGN: return "TOK_SHL_ASSIGN";
+            break;
+        case TOK_SHR_ASSIGN: return "TOK_SHR_ASSIGN";
+            break;
+        case TOK_SPC: return "TOK_SPC";
+            break;
+        case TOK_TAB: return "TOK_TAB";
+            break;
+        case TOK_NEWL: return "TOK_NEWL";
+            break;
     }
 
     return "Not a valid token";
+}
+
+char* samilang::lexer::Token::tokenToStr() const {
+    std::string token_type = tokenTypeToStr();
+    const char *mask = "<type=`%s`, type_id=`%d`, value=`%s`>";
+    char *str = static_cast<char *>(calloc(token_type.size() + strlen(mask) + 10, sizeof(char)));
+    sprintf(str, mask, token_type.c_str(), this->type, this->value);
+
+    return str;
+}
+
+bool samilang::lexer::Token::isData() const {
+    return (this->type >= TOK_INT && this->type <= TOK_IDEN) ||
+            this->type == TOK_TRUE || this->type == TOK_FALSE;
+}
+
+bool samilang::lexer::Token::isAssignment() const {
+    return this->type >= TOK_ASSIGN && this->type <= TOK_XOR_ASSIGN;
+}
+
+bool samilang::lexer::Token::isOperator() const {
+    return this->type >= TOK_ASSIGN && this->type <= TOK_RTILDE;
+}
+
+bool samilang::lexer::Token::is(samilang::lexer::TokenType t) const {
+    return this->type == t;
+}
+
+bool samilang::lexer::Token::isNot(samilang::lexer::TokenType t) const {
+    return this->type != t;
+}
+
+template<typename... T>
+bool samilang::lexer::Token::isAny(samilang::lexer::TokenType t1, samilang::lexer::TokenType t2, T... targs) const {
+    return is(t1) || isAny(t2, targs...);
 }
