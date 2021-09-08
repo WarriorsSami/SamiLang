@@ -1,3 +1,0 @@
-/media/sami/Dev Space/sami-lang/sami-lang-compiler/cmake-build-debug/CMakeFiles/edit_cache.dir
-/media/sami/Dev Space/sami-lang/sami-lang-compiler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/media/sami/Dev Space/sami-lang/sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir

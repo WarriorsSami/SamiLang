@@ -1,0 +1,3 @@
+/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles/edit_cache.dir
+/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir
