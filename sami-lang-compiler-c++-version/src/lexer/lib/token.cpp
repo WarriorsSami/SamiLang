@@ -226,6 +226,14 @@ std::string_view samilang::lexer::Token::tokenTypeToStr() {
             break;
         case TOK_LAST: return "TOK_LAST";
             break;
+        case TOK_KINT: return "TOK_KINT";
+            break;
+        case TOK_KBOOL: return "TOK_KBOOL";
+            break;
+        case TOK_KFLOAT: return "TOK_KFLOAT";
+            break;
+        case TOK_KSTR: return "TOK_KSTR";
+            break;
     }
 
     return "Not a valid token";

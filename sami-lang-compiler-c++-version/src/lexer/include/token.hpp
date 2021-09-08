@@ -23,6 +23,10 @@ namespace samilang::lexer {
         TOK_IDEN,
 
         // keywords
+        TOK_KINT,
+        TOK_KBOOL,
+        TOK_KFLOAT,
+        TOK_KSTR,
         TOK_INVK,
         TOK_MODEL,
         TOK_FNTN,

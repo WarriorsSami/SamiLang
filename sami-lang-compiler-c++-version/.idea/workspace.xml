@@ -13,8 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3a82ec21-af6a-4726-927a-002311970a51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../example.sm" beforeDir="false" afterPath="$PROJECT_DIR$/../example.sm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +98,7 @@
       <updated>1631035162083</updated>
       <workItem from="1631035168305" duration="1242000" />
       <workItem from="1631089943018" duration="4871000" />
-      <workItem from="1631115218879" duration="13000" />
+      <workItem from="1631115218879" duration="732000" />
     </task>
     <servers />
   </component>
@@ -118,5 +116,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="perf(token): use string_view&#10;&#10;Try to avoid unnecessary copies of string values using string_view instead." />
   </component>
 </project>
