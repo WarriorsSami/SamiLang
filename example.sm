@@ -11,7 +11,7 @@ group user (var name: str, var surname: str, var age: int) {
 
 let user grow {
     @@ separate different layers of parameters using pipe operator
-    fntn new :: (&self | name_, surname_: str, age_: int) => (user) {
+    fntn new :: (&self, name_, surname_: str, age_: int) => (user) {
         user(curr(name, surname, age) = (name_, surname_, age_))
     }
 
@@ -30,7 +30,7 @@ let user follow person {
 }
 
 fntn gcd :: (a, b: int) => (int) {
-    if ~ b iseq 0 ~ a
+    if ~ b == 0 ~ a
     else gcd (b, a % b)
 }
 
@@ -47,7 +47,7 @@ fntn main :: (argc: int, argv: Vec<str>) => (bare) {
 
     @@ array usage
     let store = int[3];
-    let mutate_store = |st store| :: (i: int | i in {0, 1, 2}) => (bare) {
+    let mutate_store = |st store| :: (i: int where { i in {0, 1, 2} }) => (bare) {
         store[i] = i + 1;
     }();
 

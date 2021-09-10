@@ -49,6 +49,7 @@ namespace samilang::lexer {
         TOK_WHILE,
         TOK_CONTINUE,
         TOK_BREAK,
+        TOK_WHERE,
         TOK_TRUE,
         TOK_FALSE,
 
