@@ -76,7 +76,6 @@ namespace samilang::lexer {
         TOK_DOUBLE_COLON,
         TOK_SEMI_COLON,
         TOK_COMMA,
-        TOK_PIPE,
         TOK_DOT,
 
         // arithmetic
@@ -115,11 +114,8 @@ namespace samilang::lexer {
         TOK_RRBRK,
         TOK_LARR,
         TOK_RARR,
-        TOK_LTILDE,
-        TOK_RTILDE,
 
         // others
-        TOK_AMPERSAND,
         TOK_LINE_COMMENT,
         TOK_LMLINE_COMMENT,
         TOK_RMLINE_COMMENT,

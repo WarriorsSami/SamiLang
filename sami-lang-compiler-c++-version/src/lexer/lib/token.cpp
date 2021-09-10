@@ -69,7 +69,6 @@ namespace samilang::lexer {
             "::",
             ";",
             ",",
-            "|",
             ".",
 
             "+",
@@ -104,10 +103,7 @@ namespace samilang::lexer {
             "]",
             "<",
             ">",
-            "~",
-            "~",
 
-            "&",
             "@@",
             "/@",
             "@/",
@@ -305,9 +301,6 @@ namespace samilang::lexer {
             case TOK_COMMA:
                 return "TOK_COMMA";
                 break;
-            case TOK_PIPE:
-                return "TOK_PIPE";
-                break;
             case TOK_DOT:
                 return "TOK_DOT";
                 break;
@@ -398,15 +391,6 @@ namespace samilang::lexer {
             case TOK_RARR:
                 return "TOK_RARR";
                 break;
-            case TOK_LTILDE:
-                return "TOK_LTILDE";
-                break;
-            case TOK_RTILDE:
-                return "TOK_RTILDE";
-                break;
-            case TOK_AMPERSAND:
-                return "TOK_AMPERSAND";
-                break;
             case TOK_LINE_COMMENT:
                 return "TOK_LINE_COMMENT";
                 break;
@@ -476,7 +460,7 @@ namespace samilang::lexer {
     }
 
     bool Token::isOperator() const {
-        return this->type >= TOK_ASSIGN && this->type <= TOK_RTILDE;
+        return this->type >= TOK_ASSIGN && this->type <= TOK_RARR;
     }
 
     bool Token::is(TokenType t) const {
