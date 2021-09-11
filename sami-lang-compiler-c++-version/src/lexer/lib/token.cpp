@@ -14,7 +14,6 @@ namespace samilang::lexer {
 
     vector<string_view> TokenTypeValues = {
             "INT",
-            "BOOL",
             "FLOAT",
             "STR",
             "bare",
@@ -168,9 +167,6 @@ namespace samilang::lexer {
 
             case TOK_INT:
                 return "TOK_INT";
-                break;
-            case TOK_BOOL:
-                return "TOK_BOOL";
                 break;
             case TOK_FLOAT:
                 return "TOK_FLOAT";

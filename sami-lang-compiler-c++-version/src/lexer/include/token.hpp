@@ -15,7 +15,6 @@ namespace samilang::lexer {
     enum TokenType {
         // data types
         TOK_INT,
-        TOK_BOOL,
         TOK_FLOAT,
         TOK_STR,
         TOK_BARE,
@@ -133,7 +132,7 @@ namespace samilang::lexer {
     public:
 
         // class management
-        Token(pair<int64_t, int64_t> position, TokenType type, string_view value);
+        explicit Token(pair<int64_t, int64_t> position, TokenType type, string_view value);
 
         const pair<int64_t, int64_t> &getPosition() const;
         const int64_t &getLine() const;

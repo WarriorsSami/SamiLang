@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o"
   "CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o"
   "CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/token.cpp.o"
+  "CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o"
+  "CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o"
   "sami_lang_compiler_c___version"
   "sami_lang_compiler_c___version.pdb"
 )

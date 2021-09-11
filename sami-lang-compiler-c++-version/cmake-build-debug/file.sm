@@ -1,0 +1,3 @@
+fntn main :: (argc: int, argv: Vec<str>) => (bare) {
+    println("%s", "Hello, world!");
+}

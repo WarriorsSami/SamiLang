@@ -11,6 +11,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/main.cpp" "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o"
   "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/lib/lexer.cpp" "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o"
   "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/lib/token.cpp" "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/token.cpp.o"
+  "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/lib/driver.cpp" "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o"
+  "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/lib/file_scanner.cpp" "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

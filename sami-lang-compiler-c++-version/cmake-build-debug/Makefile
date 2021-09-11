@@ -201,6 +201,54 @@ src/lexer/lib/token.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sami_lang_compiler_c___version.dir/build.make CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/token.cpp.s
 .PHONY : src/lexer/lib/token.cpp.s
 
+src/utils/lib/driver.o: src/utils/lib/driver.cpp.o
+.PHONY : src/utils/lib/driver.o
+
+# target to build an object file
+src/utils/lib/driver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sami_lang_compiler_c___version.dir/build.make CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o
+.PHONY : src/utils/lib/driver.cpp.o
+
+src/utils/lib/driver.i: src/utils/lib/driver.cpp.i
+.PHONY : src/utils/lib/driver.i
+
+# target to preprocess a source file
+src/utils/lib/driver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sami_lang_compiler_c___version.dir/build.make CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.i
+.PHONY : src/utils/lib/driver.cpp.i
+
+src/utils/lib/driver.s: src/utils/lib/driver.cpp.s
+.PHONY : src/utils/lib/driver.s
+
+# target to generate assembly for a file
+src/utils/lib/driver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sami_lang_compiler_c___version.dir/build.make CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.s
+.PHONY : src/utils/lib/driver.cpp.s
+
+src/utils/lib/file_scanner.o: src/utils/lib/file_scanner.cpp.o
+.PHONY : src/utils/lib/file_scanner.o
+
+# target to build an object file
+src/utils/lib/file_scanner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sami_lang_compiler_c___version.dir/build.make CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o
+.PHONY : src/utils/lib/file_scanner.cpp.o
+
+src/utils/lib/file_scanner.i: src/utils/lib/file_scanner.cpp.i
+.PHONY : src/utils/lib/file_scanner.i
+
+# target to preprocess a source file
+src/utils/lib/file_scanner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sami_lang_compiler_c___version.dir/build.make CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.i
+.PHONY : src/utils/lib/file_scanner.cpp.i
+
+src/utils/lib/file_scanner.s: src/utils/lib/file_scanner.cpp.s
+.PHONY : src/utils/lib/file_scanner.s
+
+# target to generate assembly for a file
+src/utils/lib/file_scanner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sami_lang_compiler_c___version.dir/build.make CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.s
+.PHONY : src/utils/lib/file_scanner.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +267,12 @@ help:
 	@echo "... src/lexer/lib/token.o"
 	@echo "... src/lexer/lib/token.i"
 	@echo "... src/lexer/lib/token.s"
+	@echo "... src/utils/lib/driver.o"
+	@echo "... src/utils/lib/driver.i"
+	@echo "... src/utils/lib/driver.s"
+	@echo "... src/utils/lib/file_scanner.o"
+	@echo "... src/utils/lib/file_scanner.i"
+	@echo "... src/utils/lib/file_scanner.s"
 .PHONY : help
 
 

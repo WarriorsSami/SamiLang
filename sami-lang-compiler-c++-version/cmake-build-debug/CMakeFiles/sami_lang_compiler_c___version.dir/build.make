@@ -105,11 +105,39 @@ CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/lib/lexer.cpp" -o CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.s
 
+CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o: CMakeFiles/sami_lang_compiler_c___version.dir/flags.make
+CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o: ../src/utils/lib/file_scanner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o -c "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/lib/file_scanner.cpp"
+
+CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/lib/file_scanner.cpp" > CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.i
+
+CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/lib/file_scanner.cpp" -o CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.s
+
+CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o: CMakeFiles/sami_lang_compiler_c___version.dir/flags.make
+CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o: ../src/utils/lib/driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o -c "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/lib/driver.cpp"
+
+CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/lib/driver.cpp" > CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.i
+
+CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/lib/driver.cpp" -o CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.s
+
 # Object files for target sami_lang_compiler_c___version
 sami_lang_compiler_c___version_OBJECTS = \
 "CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o" \
 "CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/token.cpp.o" \
-"CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o"
+"CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" \
+"CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o" \
+"CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o"
 
 # External object files for target sami_lang_compiler_c___version
 sami_lang_compiler_c___version_EXTERNAL_OBJECTS =
@@ -117,9 +145,11 @@ sami_lang_compiler_c___version_EXTERNAL_OBJECTS =
 sami_lang_compiler_c___version: CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o
 sami_lang_compiler_c___version: CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/token.cpp.o
 sami_lang_compiler_c___version: CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o
+sami_lang_compiler_c___version: CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o
+sami_lang_compiler_c___version: CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o
 sami_lang_compiler_c___version: CMakeFiles/sami_lang_compiler_c___version.dir/build.make
 sami_lang_compiler_c___version: CMakeFiles/sami_lang_compiler_c___version.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sami_lang_compiler_c___version"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sami_lang_compiler_c___version"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sami_lang_compiler_c___version.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
