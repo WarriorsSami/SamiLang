@@ -7,7 +7,10 @@
 
 #include <memory>
 #include <string>
+#include <vector>
 #include "../../../src/utils/include/file_scanner.hpp"
+#include "../../utils/include/exceptions.hpp"
+#include "token.hpp"
 
 namespace samilang::lexer {
     using namespace std;
@@ -16,10 +19,18 @@ namespace samilang::lexer {
     public:
         explicit Lexer(const string& file_name);
         void test() const;
+        LexerExceptions tokenize();
 
     private:
         unique_ptr<FileScanner> Reader;
         string src;
+        vector<string> srcList;
+        p_read code;
+        toks tokenList;
+
+        LexerExceptions tokenizeLine(const string& line, const int& len);
+        LexerExceptions removeEmptyLines();
+        LexerExceptions removeComments();
     };
 }
 

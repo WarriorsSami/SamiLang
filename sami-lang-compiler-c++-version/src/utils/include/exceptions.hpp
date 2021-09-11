@@ -21,6 +21,14 @@ namespace samilang {
             return "Cannot read file's content\n";
         }
     };
+
+    namespace lexer {
+        enum LexerExceptions {
+            E_OK,
+            E_LEX_FAIL,
+            E_PARSE_FAIL
+        };
+    }
 }
 
 #endif //SAMI_LANG_COMPILER_C___VERSION_EXCEPTIONS_HPP

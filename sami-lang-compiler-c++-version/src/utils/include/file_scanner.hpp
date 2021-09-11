@@ -7,9 +7,11 @@
 
 #include <fstream>
 #include <string>
+#include <vector>
 
 namespace samilang {
     using namespace std;
+    using p_read = pair<string, vector<string>>;
 
     // class for reading content of files as string and
     // retrieving the output to the lexer
@@ -17,6 +19,8 @@ namespace samilang {
     public:
         explicit FileScanner(const string& file_name);
         string getString();
+        vector<string> getStringList();
+        p_read readFile();
 
     private:
         ifstream fin;

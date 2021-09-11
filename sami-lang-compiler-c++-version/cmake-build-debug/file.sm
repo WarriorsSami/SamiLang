@@ -1,3 +1,8 @@
+/@
+hello there this is a comment
+@/
+
 fntn main :: (argc: int, argv: Vec<str>) => (bare) {
+    @@ another comment
     println("%s", "Hello, world!");
 }

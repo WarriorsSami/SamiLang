@@ -4,18 +4,24 @@
 CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o: \
  ../main.cpp \
  ../src/lexer/include/lexer.hpp \
+ ../src/lexer/include/token.hpp \
  ../src/utils/include/driver.hpp \
+ ../src/utils/include/exceptions.hpp \
  ../src/utils/include/file_scanner.hpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o: \
  ../src/lexer/include/lexer.hpp \
+ ../src/lexer/include/token.hpp \
  ../src/lexer/lib/lexer.cpp \
+ ../src/utils/include/exceptions.hpp \
  ../src/utils/include/file_scanner.hpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/token.cpp.o: \
  ../src/lexer/include/token.hpp \
  ../src/lexer/lib/token.cpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o: \
  ../src/lexer/include/lexer.hpp \
+ ../src/lexer/include/token.hpp \
  ../src/utils/include/driver.hpp \
+ ../src/utils/include/exceptions.hpp \
  ../src/utils/include/file_scanner.hpp \
  ../src/utils/lib/driver.cpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o: \

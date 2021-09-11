@@ -8,6 +8,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <vector>
 
 namespace samilang {
     using namespace std;
@@ -33,5 +34,31 @@ namespace samilang {
             cerr << e.what();
         }
         return src;
+    }
+
+    vector<string> FileScanner::getStringList() {
+        vector<string> lines;
+        try {
+            string curr;
+            while (getline(fin, curr))
+                lines.emplace_back(curr);
+        } catch (UnreadableFileException& e) {
+            cerr << e.what();
+        }
+        return lines;
+    }
+
+    p_read FileScanner::readFile() {
+        p_read res;
+        try {
+            string curr;
+            while (getline(fin, curr)) {
+                res.second.emplace_back(curr);
+                res.first += curr;
+            }
+        } catch (UnreadableFileException& e) {
+            cerr << e.what();
+        }
+        return res;
     }
 }

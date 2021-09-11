@@ -4,18 +4,24 @@
 CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/main.cpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/lexer.hpp
+ /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/token.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/driver.hpp
+ /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/exceptions.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/file_scanner.hpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/lexer.hpp
+ /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/token.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/lib/lexer.cpp
+ /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/exceptions.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/file_scanner.hpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/token.cpp.o
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/token.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/lib/token.cpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/lexer.hpp
+ /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/token.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/driver.hpp
+ /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/exceptions.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/file_scanner.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/lib/driver.cpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o

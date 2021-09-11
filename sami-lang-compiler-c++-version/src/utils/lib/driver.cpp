@@ -13,5 +13,8 @@ namespace samilang {
 
     void Driver::launch() const {
         Lex->test();
+        /*LexerExceptions res = */Lex->tokenize();
+        //handle(res);
+        Lex->test();
     }
 }
