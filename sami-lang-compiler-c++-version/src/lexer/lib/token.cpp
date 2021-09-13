@@ -2,6 +2,7 @@
 // Created by sami on 08.09.2021.
 //
 
+#include <iostream>
 #include <utility>
 #include <string>
 #include <cstdio>
@@ -12,116 +13,13 @@
 namespace samilang::lexer {
     using namespace std;
 
-    vector<string_view> TokenTypeValues = {
-            "INT",
-            "FLOAT",
-            "STR",
-            "bare",
-
-            "IDEN",
-
-            "int",
-            "bool",
-            "float",
-            "str",
-            "invk",
-            "model",
-            "fntn",
-            "group",
-            "let",
-            "follow",
-            "grow",
-            "self",
-            "var",
-            "val",
-            "curr",
-            "return",
-            "gt",
-            "st",
-            "if",
-            "else",
-            "for",
-            "in",
-            "while",
-            "continue",
-            "break",
-            "where",
-            "true",
-            "false",
-
-            "=",
-            "+=",
-            "-=",
-            "*=",
-            "/=",
-            "%=",
-            "**=",
-            "<<=",
-            ">>=",
-            "&=",
-            "|=",
-            "^=",
-
-            "->",
-            "=>",
-            ":",
-            "::",
-            ";",
-            ",",
-            ".",
-
-            "+",
-            "-",
-            "*",
-            "/",
-            "%",
-            "**",
-            ">",
-            "<",
-            ">=",
-            "<=",
-
-            "==",
-            "!=",
-            "&&",
-            "||",
-            "!",
-
-            "&",
-            "|",
-            "^",
-            "~",
-            "<<",
-            ">>",
-
-            "(",
-            ")",
-            "{",
-            "}",
-            "[",
-            "]",
-            "<",
-            ">",
-
-            "::<",
-            "::>",
-            "@@",
-            "/@",
-            "@/",
-            "SPC",
-            "TAB",
-            "NEWL",
-
-            "<EOF>"
-    };
-
-    Token::Token(
+    inline Token::Token(
             pair<int64_t, int64_t> position,
             TokenType type,
-            string_view value
-    ) : position(move(position)), type(type), value(value) {}
+            string  value
+    ) : position(move(position)), type(type), value(move(value)) {}
 
-    string Token::tokenTypeToStr() const {
+    inline string Token::tokenTypeToStr() const {
         switch (this->type) {
             case TOK_INT:
                 return "TOK_INT";
@@ -401,39 +299,39 @@ namespace samilang::lexer {
         return "Not a valid token";
     }
 
-    char *Token::tokenToStr() const {
+    inline char *Token::tokenToStr() const {
         string token_type = tokenTypeToStr();
-        const char *mask = "<type=`%s`, type_id=`%d`, value=`%s`, position=`%d[%d]`>";
+        char mask[] = "<type=`%s`, type_id=`%d`, value=`%s`, position=`%d[%d]`>";
         char *str = static_cast<char *>(calloc(token_type.size() + strlen(mask) + 10, sizeof(char)));
         sprintf(str, mask,
-                token_type.c_str(), this->type, this->value, this->position.first, this->position.second);
+                token_type.c_str(), this->type, this->value.c_str(), this->position.first, this->position.second);
 
         return str;
     }
 
-    bool Token::isData() const {
+    inline bool Token::isData() const {
         return (this->type >= TOK_INT && this->type <= TOK_IDEN) ||
                this->type == TOK_TRUE || this->type == TOK_FALSE;
     }
 
-    bool Token::isAssignment() const {
+    inline bool Token::isAssignment() const {
         return this->type >= TOK_ASSIGN && this->type <= TOK_XOR_ASSIGN;
     }
 
-    bool Token::isOperator() const {
+    inline bool Token::isOperator() const {
         return this->type >= TOK_ASSIGN && this->type <= TOK_RARR;
     }
 
-    bool Token::is(TokenType t) const {
+    inline bool Token::is(TokenType t) const {
         return this->type == t;
     }
 
-    bool Token::isNot(TokenType t) const {
+    inline bool Token::isNot(TokenType t) const {
         return this->type != t;
     }
 
     template<typename... T>
-    bool Token::isAny(TokenType t1, TokenType t2, T... targs) const {
+    inline bool Token::isAny(TokenType t1, TokenType t2, T... targs) const {
         return is(t1) || isAny(t2, targs...);
     }
 }

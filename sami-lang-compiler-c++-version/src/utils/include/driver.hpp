@@ -22,6 +22,8 @@ namespace samilang {
 
     private:
         unique_ptr<Lexer> Lex;
+
+        static void handle(LexerExceptions err) ;
     };
 }
 

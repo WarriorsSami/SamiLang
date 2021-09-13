@@ -12,6 +12,7 @@ CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/lexer.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/token.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/lib/lexer.cpp
+ /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/lib/token.cpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/exceptions.hpp
  /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/file_scanner.hpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/token.cpp.o

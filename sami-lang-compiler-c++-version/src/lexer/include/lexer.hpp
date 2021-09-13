@@ -27,8 +27,13 @@ namespace samilang::lexer {
         vector<string> srcList;
         p_read code;
         toks tokenList;
+        int comment_block_remainder;
 
-        LexerExceptions tokenizeLine(const string& line, const int& len);
+        LexerExceptions tokenizeLine(const string& line, const int& len, const int& num_line);
+
+        // helper methods
+        static string get_name(const string& line, const int& len, int& i);
+        static TokenType tag_name(const string& str);
     };
 }
 

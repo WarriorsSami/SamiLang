@@ -12,6 +12,7 @@ CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o: \
  ../src/lexer/include/lexer.hpp \
  ../src/lexer/include/token.hpp \
  ../src/lexer/lib/lexer.cpp \
+ ../src/lexer/lib/token.cpp \
  ../src/utils/include/exceptions.hpp \
  ../src/utils/include/file_scanner.hpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/token.cpp.o: \

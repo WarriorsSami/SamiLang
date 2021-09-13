@@ -134,7 +134,7 @@ namespace samilang::lexer {
     public:
 
         // class management
-        explicit Token(pair<int64_t, int64_t> position, TokenType type, string_view value);
+        explicit Token(pair<int64_t, int64_t> position, TokenType type, string  value);
         friend class Lexer;
 
         // fundamental functionality
@@ -153,7 +153,7 @@ namespace samilang::lexer {
     private:
         pair<int64_t, int64_t> position;
         TokenType type;
-        string_view value;
+        string value;
     };
 
     using toks = vector<Token>;
