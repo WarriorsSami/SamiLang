@@ -115,6 +115,8 @@ namespace samilang::lexer {
         TOK_RARR,
 
         // others
+        TOK_CIN,
+        TOK_COUT,
         TOK_LINE_COMMENT,
         TOK_LMLINE_COMMENT,
         TOK_RMLINE_COMMENT,
@@ -133,19 +135,7 @@ namespace samilang::lexer {
 
         // class management
         explicit Token(pair<int64_t, int64_t> position, TokenType type, string_view value);
-
-        const pair<int64_t, int64_t> &getPosition() const;
-        const int64_t &getLine() const;
-        const int64_t &getColumn() const;
-        TokenType getType() const;
-        const string_view &getValue() const;
-
-        void setPosition(const pair<int64_t, int64_t> &position);
-        void setLine(const int64_t &line);
-        void setColumn(const int64_t& column);
-        void setType(TokenType type);
-        void setValue(const string_view &value);
-
+        friend class Lexer;
 
         // fundamental functionality
         string tokenTypeToStr() const;

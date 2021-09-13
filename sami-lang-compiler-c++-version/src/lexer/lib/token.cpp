@@ -103,6 +103,8 @@ namespace samilang::lexer {
             "<",
             ">",
 
+            "::<",
+            "::>",
             "@@",
             "/@",
             "@/",
@@ -113,49 +115,6 @@ namespace samilang::lexer {
             "<EOF>"
     };
 
-// Getters for Token class
-    const pair<long, long> &Token::getPosition() const {
-        return position;
-    }
-
-    const long &Token::getLine() const {
-        return position.first;
-    }
-
-    const long &Token::getColumn() const {
-        return position.second;
-    }
-
-    TokenType Token::getType() const {
-        return type;
-    }
-
-    const string_view &Token::getValue() const {
-        return value;
-    }
-
-
-// Setters for Token class
-    void Token::setPosition(const pair<int64_t, int64_t> &position) {
-        this->position = position;
-    }
-
-    void Token::setLine(const int64_t &line) {
-        this->position.first = line;
-    }
-
-    void Token::setColumn(const int64_t &column) {
-        this->position.second = column;
-    }
-
-    void Token::setType(TokenType type) {
-        this->type = type;
-    }
-
-    void Token::setValue(const string_view &value) {
-        this->value = value;
-    }
-
     Token::Token(
             pair<int64_t, int64_t> position,
             TokenType type,
@@ -164,7 +123,6 @@ namespace samilang::lexer {
 
     string Token::tokenTypeToStr() const {
         switch (this->type) {
-
             case TOK_INT:
                 return "TOK_INT";
                 break;
@@ -431,6 +389,12 @@ namespace samilang::lexer {
                 break;
             case TOK_WHERE:
                 return "TOK_WHERE";
+                break;
+            case TOK_CIN:
+                return "TOK_CIN";
+                break;
+            case TOK_COUT:
+                return "TOK_COUT";
                 break;
         }
 

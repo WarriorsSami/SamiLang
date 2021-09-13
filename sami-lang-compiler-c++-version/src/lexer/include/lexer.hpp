@@ -29,8 +29,6 @@ namespace samilang::lexer {
         toks tokenList;
 
         LexerExceptions tokenizeLine(const string& line, const int& len);
-        LexerExceptions removeEmptyLines();
-        LexerExceptions removeComments();
     };
 }
 
