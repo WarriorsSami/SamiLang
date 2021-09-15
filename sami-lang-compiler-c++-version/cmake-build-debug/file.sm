@@ -10,6 +10,4 @@ fntn main :: (argc: int, argv: Vec<str>) => (bare) {
     @@ another comment
     println("%s\n", "Hello, world!");
     println("%d", f1_f2(1, 2));
-
-    INT
 }

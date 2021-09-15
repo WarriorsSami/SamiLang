@@ -34,6 +34,8 @@ namespace samilang::lexer {
         // helper methods
         static string get_name(const string& line, const int& len, int& i);
         static TokenType tag_name(const string& str);
+        static str_err get_string(const string& line, const int& len, int& i);
+        static void remove_back_slash(string& str);
     };
 }
 

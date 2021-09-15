@@ -14,7 +14,7 @@
 
 #define CURR(line) (line[i])
 #define NEXT(line, i) (i + 1 < len ? line[i + 1] : 0)
-#define PREV(line) (line.size() > 0 && i - 1 >= 0 ? line[i - 1] : 0)
+#define PREV(line) (!line.empty() && i - 1 >= 0 ? line[i - 1] : 0)
 
 
 namespace samilang::lexer {
@@ -200,7 +200,13 @@ namespace samilang::lexer {
 
             // literal string encountered
             if (CURR(line) == '\"' || CURR(line) == '\'') {
-                // TODO
+                str_err str = get_string(line, len, i);
+                if (str.second != E_OK) {
+                    res = str.second;
+                    break;
+                }
+                tokenList.emplace_back(make_pair(num_line, tmp_col), TOK_STR, str.first);
+                continue;
             }
 
             ++i;
@@ -219,68 +225,7 @@ namespace samilang::lexer {
     }
 
     TokenType Lexer::tag_name(const string &str) {
-        /*if (str == TokenValues[TOK_KINT])
-            return TOK_KINT;
-        else if (str == TokenValues[TOK_KBOOL])
-            return TOK_KBOOL;
-        else if (str == TokenValues[TOK_BARE])
-            return TOK_BARE;
-        else if (str == TokenValues[TOK_KFLOAT])
-            return TOK_KFLOAT;
-        else if (str == TokenValues[TOK_KSTR])
-            return TOK_KSTR;
-        else if (str == TokenValues[TOK_INVK])
-            return TOK_INVK;
-        else if (str == TokenValues[TOK_MODEL])
-            return TOK_MODEL;
-        else if (str == TokenValues[TOK_FNTN])
-            return TOK_FNTN;
-        else if (str == TokenValues[TOK_GRP])
-            return TOK_GRP;
-        else if (str == TokenValues[TOK_LET])
-            return TOK_LET;
-        else if (str == TokenValues[TOK_FLW])
-            return TOK_FLW;
-        else if (str == TokenValues[TOK_GRW])
-            return TOK_GRW;
-        else if (str == TokenValues[TOK_SELF])
-            return TOK_SELF;
-        else if (str == TokenValues[TOK_VAR])
-            return TOK_VAR;
-        else if (str == TokenValues[TOK_VAL])
-            return TOK_VAL;
-        else if (str == TokenValues[TOK_CURR])
-            return TOK_CURR;
-        else if (str == TokenValues[TOK_RETURN])
-            return TOK_RETURN;
-        else if (str == TokenValues[TOK_GT])
-            return TOK_GT;
-        else if (str == TokenValues[TOK_ST])
-            return TOK_ST;
-        else if (str == TokenValues[TOK_IF])
-            return TOK_IF;
-        else if (str == TokenValues[TOK_ELSE])
-            return TOK_ELSE;
-        else if (str == TokenValues[TOK_FOR])
-            return TOK_FOR;
-        else if (str == TokenValues[TOK_IN])
-            return TOK_IN;
-        else if (str == TokenValues[TOK_WHILE])
-            return TOK_WHILE;
-        else if (str == TokenValues[TOK_CONTINUE])
-            return TOK_CONTINUE;
-        else if (str == TokenValues[TOK_BREAK])
-            return TOK_BREAK;
-        else if (str == TokenValues[TOK_WHERE])
-            return TOK_WHERE;
-        else if (str == TokenValues[TOK_TRUE])
-            return TOK_TRUE;
-        else if (str == TokenValues[TOK_FALSE])
-            return TOK_FALSE;
-
-        return TOK_IDEN;*/
-
-        auto is_keyword = [str](const string& item) {
+        auto is_keyword = [str](const string &item) {
             return str == item;
         };
         auto first = find(begin(TokenValues), end(TokenValues), "int"),
@@ -289,5 +234,34 @@ namespace samilang::lexer {
         auto key = find_if(first, last, is_keyword);
         if (key == last) return TOK_IDEN;
         else return static_cast<TokenType>(distance(begin(TokenValues), key));
+    }
+
+    str_err Lexer::get_string(const string &line, const int &len, int &i) {
+        string buffer;
+        const char quote_type = CURR(line);
+        // skip beginning quote
+        ++i;
+        while ((CURR(line) != quote_type || PREV(line) == '\\') && i < len) {
+            buffer.push_back(CURR(line)), ++i;
+        }
+        if (CURR(line) != quote_type)
+            return make_pair(buffer, E_LEX_FAIL);
+        // skip ending quote
+        ++i;
+        //remove_back_slash(buffer);
+        return make_pair(buffer, E_OK);
+    }
+
+    void Lexer::remove_back_slash(string &str) {
+        auto last = end(str);
+        vector<char> base = {'a', 'b', 'f', 'n', 'r', 't', 'v'},
+                     esc  = {'\a', '\b', '\f', '\n', '\r', '\t', '\v'};
+        for (auto it = begin(str); it != last; ++it) {
+            if (*it == '\\') {
+                it = str.erase(it);
+                auto val = find(begin(base), end(base), *it);
+                *it = esc[distance(begin(base), val)];
+            }
+        }
     }
 }

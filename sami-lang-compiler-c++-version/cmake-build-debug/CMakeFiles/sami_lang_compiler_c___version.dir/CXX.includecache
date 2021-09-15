@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/main.cpp
-iostream
--
-memory
--
-src/utils/include/driver.hpp
-/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/driver.hpp
-
 /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/lexer.hpp
 memory
 -
@@ -68,16 +60,6 @@ vector
 ../include/token.hpp
 /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/token.hpp
 
-/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/driver.hpp
-memory
--
-string
--
-file_scanner.hpp
-/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/file_scanner.hpp
-../../../src/lexer/include/lexer.hpp
-/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/lexer.hpp
-
 /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/exceptions.hpp
 exception
 -
@@ -89,14 +71,6 @@ string
 -
 vector
 -
-
-/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/lib/driver.cpp
-iostream
--
-string
--
-memory
--
-../include/driver.hpp
-/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/driver.hpp
+exceptions.hpp
+/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/exceptions.hpp
 
