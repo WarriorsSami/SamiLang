@@ -222,12 +222,13 @@ namespace samilang::lexer {
             }
 
             // operator encountered
-            TokenType op_type = get_operator(line, len, i);
+            /*TokenType op_type = get_operator(line, len, i);
             if (op_type < 0) {
                 res = E_LEX_FAIL;
                 break;
             }
-            tokenList.emplace_back(make_pair(num_line, tmp_col), op_type, TokenValues[op_type]);
+            tokenList.emplace_back(make_pair(num_line, tmp_col), op_type, TokenValues[op_type]);*/
+            ++i;
         }
 
         this->comment_block_remainder = comment_block;
