@@ -5,11 +5,8 @@
 #include <iostream>
 #include <string>
 #include <memory>
-#include <iterator>
-#include <algorithm>
 #include <vector>
 #include "../include/lexer.hpp"
-//#include "../include/token.hpp"
 #include "token.cpp"
 
 #define CURR(line) (line[i])
@@ -192,7 +189,11 @@ namespace samilang::lexer {
 
             // string encountered (identifier or keyword)
             if (isalpha(CURR(line)) || CURR(line) == '_') {
-                const string& str = get_name(line, len, i);
+                auto [str, err] = get_name(line, len, i);
+                if (err != E_OK) {
+                    res = err;
+                    break;
+                }
                 TokenType kw_or_id = tag_name(str);
                 tokenList.emplace_back(make_pair(num_line, tmp_col), kw_or_id, str);
                 continue;
@@ -200,12 +201,23 @@ namespace samilang::lexer {
 
             // literal string encountered
             if (CURR(line) == '\"' || CURR(line) == '\'') {
-                str_err str = get_string(line, len, i);
-                if (str.second != E_OK) {
-                    res = str.second;
+                auto [str, err] = get_string(line, len, i);
+                if (err != E_OK) {
+                    res = err;
                     break;
                 }
-                tokenList.emplace_back(make_pair(num_line, tmp_col), TOK_STR, str.first);
+                tokenList.emplace_back(make_pair(num_line, tmp_col), TOK_STR, str);
+                continue;
+            }
+
+            // literal number encountered
+            if (isdigit(CURR(line))) {
+                auto [nr_type, nr, err] = get_number(line, len, i);
+                if (err != E_OK) {
+                    res = err;
+                    break;
+                }
+                tokenList.emplace_back(make_pair(num_line, tmp_col), nr_type, nr);
                 continue;
             }
 
@@ -216,12 +228,14 @@ namespace samilang::lexer {
         return res;
     }
 
-    string Lexer::get_name(const string &line, const int &len, int &i) {
+    str_err Lexer::get_name(const string &line, const int &len, int &i) {
         string buffer;
         while ((isalnum(CURR(line)) || CURR(line) == '_') && i < len) {
             buffer.push_back(CURR(line)), ++i;
         }
-        return buffer;
+        if (buffer.empty())
+            return make_pair(buffer, E_PARSE_FAIL);
+        return make_pair(buffer, E_OK);
     }
 
     TokenType Lexer::tag_name(const string &str) {
@@ -246,9 +260,11 @@ namespace samilang::lexer {
         }
         if (CURR(line) != quote_type)
             return make_pair(buffer, E_LEX_FAIL);
+        if (buffer.empty())
+            return make_pair(buffer, E_PARSE_FAIL);
         // skip ending quote
         ++i;
-        //remove_back_slash(buffer);
+        remove_back_slash(buffer);
         return make_pair(buffer, E_OK);
     }
 
@@ -263,5 +279,54 @@ namespace samilang::lexer {
                 *it = esc[distance(begin(base), val)];
             }
         }
+    }
+
+    nr_err Lexer::get_number(const string &line, const int &len, int &i) {
+        string buffer;
+        TokenType num_type = TOK_INT;
+        bool dot_encountered = false;
+        int starting_index = i;
+
+        while (is_valid_char_num(CURR(line)) && i < len) {
+            const char curr = CURR(line),
+                       next = NEXT(line, i);
+
+            switch (curr) {
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    break;
+                case '.': {
+                    if (!dot_encountered) {
+                        dot_encountered = true;
+                        if (isdigit(next))
+                            num_type = TOK_FLOAT;
+                        else return make_tuple(num_type, buffer, E_OK);
+                    } else {
+                        return make_tuple(num_type, buffer, E_PARSE_FAIL);
+                    }
+                }
+                    break;
+                default: {
+                    if (curr == 'x' && i - starting_index != 1)
+                        return make_tuple(num_type, buffer, E_PARSE_FAIL);
+                }
+            }
+            buffer.push_back(curr), ++i;
+        }
+
+        return make_tuple(num_type, buffer, E_OK);
+    }
+
+    bool Lexer::is_valid_char_num(char c) {
+        c = static_cast<char>(tolower(c));
+        return isdigit(c) || ('a' <= c && c <= 'f') || c == '.' || c == 'x';
     }
 }

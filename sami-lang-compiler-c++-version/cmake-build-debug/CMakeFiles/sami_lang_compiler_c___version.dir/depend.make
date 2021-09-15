@@ -26,6 +26,7 @@ CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o: \
  ../src/utils/include/file_scanner.hpp \
  ../src/utils/lib/driver.cpp
 CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o: \
+ ../src/lexer/include/token.hpp \
  ../src/utils/include/exceptions.hpp \
  ../src/utils/include/file_scanner.hpp \
  ../src/utils/lib/file_scanner.cpp

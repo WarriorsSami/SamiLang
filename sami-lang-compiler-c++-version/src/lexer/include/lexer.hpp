@@ -32,10 +32,12 @@ namespace samilang::lexer {
         LexerExceptions tokenizeLine(const string& line, const int& len, const int& num_line);
 
         // helper methods
-        static string get_name(const string& line, const int& len, int& i);
+        static str_err get_name(const string& line, const int& len, int& i);
         static TokenType tag_name(const string& str);
         static str_err get_string(const string& line, const int& len, int& i);
         static void remove_back_slash(string& str);
+        static nr_err get_number(const string& line, const int& len, int& i);
+        static bool is_valid_char_num(char c);
     };
 }
 

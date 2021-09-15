@@ -309,16 +309,16 @@ namespace samilang::lexer {
         return str;
     }
 
-    inline bool Token::isData() const {
+    [[maybe_unused]] inline bool Token::isData() const {
         return (this->type >= TOK_INT && this->type <= TOK_IDEN) ||
                this->type == TOK_TRUE || this->type == TOK_FALSE;
     }
 
-    inline bool Token::isAssignment() const {
+    [[maybe_unused]] inline bool Token::isAssignment() const {
         return this->type >= TOK_ASSIGN && this->type <= TOK_XOR_ASSIGN;
     }
 
-    inline bool Token::isOperator() const {
+    [[maybe_unused]] inline bool Token::isOperator() const {
         return this->type >= TOK_ASSIGN && this->type <= TOK_RARR;
     }
 
@@ -326,7 +326,7 @@ namespace samilang::lexer {
         return this->type == t;
     }
 
-    inline bool Token::isNot(TokenType t) const {
+    [[maybe_unused]] inline bool Token::isNot(TokenType t) const {
         return this->type != t;
     }
 

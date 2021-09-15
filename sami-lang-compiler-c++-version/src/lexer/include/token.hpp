@@ -138,14 +138,17 @@ namespace samilang::lexer {
         friend class Lexer;
 
         // fundamental functionality
-        string tokenTypeToStr() const;
-        char* tokenToStr() const;
+        [[nodiscard]] string tokenTypeToStr() const;
+        [[nodiscard]] char* tokenToStr() const;
 
-        bool isData() const;
-        bool isAssignment() const;
-        bool isOperator() const;
-        bool is(TokenType t) const;
-        bool isNot(TokenType t) const;
+        [[maybe_unused]] [[nodiscard]] bool isData() const;
+
+        [[maybe_unused]] [[nodiscard]] bool isAssignment() const;
+
+        [[maybe_unused]] [[nodiscard]] bool isOperator() const;
+        [[nodiscard]] bool is(TokenType t) const;
+
+        [[maybe_unused]] [[nodiscard]] bool isNot(TokenType t) const;
 
         template<typename ...T>
         bool isAny(TokenType t1, TokenType t2, T... targs) const;

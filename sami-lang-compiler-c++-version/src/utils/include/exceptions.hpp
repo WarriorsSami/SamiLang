@@ -6,9 +6,12 @@
 #define SAMI_LANG_COMPILER_C___VERSION_EXCEPTIONS_HPP
 
 #include <exception>
+#include "../../lexer/include/token.hpp"
 
 namespace samilang {
     using namespace std;
+
+    using p_read = pair<string, vector<string>>;
 
     struct FileNotFoundException: exception {
         const char* what() const noexcept override {
@@ -28,6 +31,9 @@ namespace samilang {
             E_LEX_FAIL,
             E_PARSE_FAIL
         };
+
+        using str_err = pair<string, LexerExceptions>;
+        using nr_err = tuple<TokenType, string, LexerExceptions>;
     }
 }
 

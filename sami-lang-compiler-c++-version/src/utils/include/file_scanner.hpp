@@ -13,8 +13,6 @@
 namespace samilang {
     using namespace std;
     using namespace lexer;
-    using p_read = pair<string, vector<string>>;
-    using str_err = pair<string, LexerExceptions>;
 
     // class for reading content of files as string and
     // retrieving the output to the lexer

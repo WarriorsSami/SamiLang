@@ -33,10 +33,6 @@ string
 -
 memory
 -
-iterator
--
-algorithm
--
 vector
 -
 ../include/lexer.hpp
@@ -63,6 +59,8 @@ vector
 /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/exceptions.hpp
 exception
 -
+../../lexer/include/token.hpp
+/media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/lexer/include/token.hpp
 
 /media/sami/Dev Space/sami-lang/sami-lang-compiler-c++-version/src/utils/include/file_scanner.hpp
 fstream

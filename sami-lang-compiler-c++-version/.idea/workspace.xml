@@ -13,16 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3a82ec21-af6a-4726-927a-002311970a51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/file.sm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/file.sm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sami_lang_compiler_c___version" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sami_lang_compiler_c___version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/include/lexer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/include/lexer.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lexer/include/token.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/include/token.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/lib/lexer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lib/lexer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lexer/lib/token.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lib/token.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/include/exceptions.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/include/exceptions.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/include/file_scanner.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/include/file_scanner.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
