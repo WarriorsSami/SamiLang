@@ -13,12 +13,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3a82ec21-af6a-4726-927a-002311970a51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/file.sm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/file.sm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sami_lang_compiler_c___version" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sami_lang_compiler_c___version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/include/lexer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/include/lexer.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lexer/include/token.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/include/token.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/lib/lexer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lib/lexer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/lib/token.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lib/token.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/include/exceptions.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/include/exceptions.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/include/file_scanner.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/include/file_scanner.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +42,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1631555084" />
+                    <option name="branchName" value="lexer" />
+                    <option name="lastUsedInstant" value="1631701907" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="lexer" />
-                    <option name="lastUsedInstant" value="1631348361" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1631701884" />
                   </RecentBranch>
                 </list>
               </option>
@@ -77,7 +78,7 @@
     <property name="cmake.loaded.for.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils/lib" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
