@@ -300,7 +300,8 @@ namespace samilang::lexer {
     inline char *Token::tokenToStr() const {
         string token_type = tokenTypeToStr();
         char mask[] = "<type=`%s`, type_id=`%d`, value=`%s`, position=`%d[%d]`>";
-        char *str = static_cast<char *>(calloc(token_type.size() + strlen(mask) + 10, sizeof(char)));
+        char *str = static_cast<char *>(calloc(token_type.size() + this->value.size() + strlen(mask) + 10,
+                                               sizeof(char)));
         sprintf(str, mask,
                 token_type.c_str(), this->type, this->value.c_str(), this->position.first, this->position.second);
 
