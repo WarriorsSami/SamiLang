@@ -13,11 +13,10 @@ namespace samilang::lexer {
 
     // Token types
     enum TokenType {
-        // data types
+        // literals
         TOK_INT,
         TOK_FLOAT,
         TOK_STR,
-        TOK_BARE,
 
         // identifier
         TOK_IDEN,
@@ -27,6 +26,7 @@ namespace samilang::lexer {
         TOK_KBOOL,
         TOK_KFLOAT,
         TOK_KSTR,
+        TOK_BARE,
         TOK_INVK,
         TOK_MODEL,
         TOK_FNTN,

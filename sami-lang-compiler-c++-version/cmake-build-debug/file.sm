@@ -2,8 +2,14 @@
 hello there this is a comment
 @/
 
-/@@/
+fntn f1_f2 :: ((a, b): int) => (int) {
+    return a + b;
+}
+
 fntn main :: (argc: int, argv: Vec<str>) => (bare) {
     @@ another comment
-    println("%s", "Hello, world!");
+    println("%s\n", "Hello, world!");
+    println("%d", f1_f2(1, 2));
+
+    INT
 }

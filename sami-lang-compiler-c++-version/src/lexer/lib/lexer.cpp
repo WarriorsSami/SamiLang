@@ -5,6 +5,9 @@
 #include <iostream>
 #include <string>
 #include <memory>
+#include <iterator>
+#include <algorithm>
+#include <vector>
 #include "../include/lexer.hpp"
 //#include "../include/token.hpp"
 #include "token.cpp"
@@ -21,7 +24,6 @@ namespace samilang::lexer {
             "INT",
             "FLOAT",
             "STR",
-            "bare",
 
             "IDEN",
 
@@ -29,6 +31,7 @@ namespace samilang::lexer {
             "bool",
             "float",
             "str",
+            "bare",
             "invk",
             "model",
             "fntn",
@@ -188,7 +191,7 @@ namespace samilang::lexer {
             int tmp_col = i + 1;
 
             // string encountered (identifier or keyword)
-            if (isalpha(CURR(line))) {
+            if (isalpha(CURR(line)) || CURR(line) == '_') {
                 const string& str = get_name(line, len, i);
                 TokenType kw_or_id = tag_name(str);
                 tokenList.emplace_back(make_pair(num_line, tmp_col), kw_or_id, str);
@@ -209,14 +212,14 @@ namespace samilang::lexer {
 
     string Lexer::get_name(const string &line, const int &len, int &i) {
         string buffer;
-        while (isalpha(CURR(line)) && i < len) {
+        while ((isalnum(CURR(line)) || CURR(line) == '_') && i < len) {
             buffer.push_back(CURR(line)), ++i;
         }
         return buffer;
     }
 
     TokenType Lexer::tag_name(const string &str) {
-        if (str == TokenValues[TOK_KINT])
+        /*if (str == TokenValues[TOK_KINT])
             return TOK_KINT;
         else if (str == TokenValues[TOK_KBOOL])
             return TOK_KBOOL;
@@ -275,6 +278,16 @@ namespace samilang::lexer {
         else if (str == TokenValues[TOK_FALSE])
             return TOK_FALSE;
 
-        return TOK_IDEN;
+        return TOK_IDEN;*/
+
+        auto is_keyword = [str](const string& item) {
+            return str == item;
+        };
+        auto first = find(begin(TokenValues), end(TokenValues), "int"),
+             last = find(begin(TokenValues), end(TokenValues), "=");
+
+        auto key = find_if(first, last, is_keyword);
+        if (key == last) return TOK_IDEN;
+        else return static_cast<TokenType>(distance(begin(TokenValues), key));
     }
 }

@@ -11,7 +11,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a82ec21-af6a-4726-927a-002311970a51" name="Changes" comment="" />
+    <list default="true" id="3a82ec21-af6a-4726-927a-002311970a51" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/file.sm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/file.sm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sami_lang_compiler_c___version" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sami_lang_compiler_c___version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lexer/lib/lexer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lib/lexer.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,12 +41,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="lexer" />
-                    <option name="lastUsedInstant" value="1631348361" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1631555084" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1631348349" />
+                    <option name="branchName" value="lexer" />
+                    <option name="lastUsedInstant" value="1631348361" />
                   </RecentBranch>
                 </list>
               </option>
@@ -82,11 +90,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="sami_lang_compiler_c___version" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="file.sm" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sami_lang_compiler_c___version" TARGET_NAME="sami_lang_compiler_c___version" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="sami_lang_compiler_c___version" RUN_TARGET_NAME="sami_lang_compiler_c___version">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -111,7 +114,8 @@
       <workItem from="1631115218879" duration="4893000" />
       <workItem from="1631260787747" duration="338000" />
       <workItem from="1631343988630" duration="9952000" />
-      <workItem from="1631546880149" duration="8135000" />
+      <workItem from="1631546880149" duration="8275000" />
+      <workItem from="1631689979208" duration="988000" />
     </task>
     <servers />
   </component>
