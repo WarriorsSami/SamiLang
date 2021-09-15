@@ -295,8 +295,6 @@ namespace samilang::lexer {
                 return "TOK_COUT";
                 break;
         }
-
-        return "Not a valid token";
     }
 
     inline char *Token::tokenToStr() const {

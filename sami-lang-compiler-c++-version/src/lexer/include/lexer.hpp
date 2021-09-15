@@ -38,6 +38,7 @@ namespace samilang::lexer {
         static void remove_back_slash(string& str);
         static nr_err get_number(const string& line, const int& len, int& i);
         static bool is_valid_char_num(char c);
+        static TokenType get_operator(const string& line, const int& len, int& i);
     };
 }
 

@@ -221,7 +221,13 @@ namespace samilang::lexer {
                 continue;
             }
 
-            ++i;
+            // operator encountered
+            TokenType op_type = get_operator(line, len, i);
+            if (op_type < 0) {
+                res = E_LEX_FAIL;
+                break;
+            }
+            tokenList.emplace_back(make_pair(num_line, tmp_col), op_type, TokenValues[op_type]);
         }
 
         this->comment_block_remainder = comment_block;
@@ -321,12 +327,18 @@ namespace samilang::lexer {
             }
             buffer.push_back(curr), ++i;
         }
-
+        if (buffer.empty())
+            return make_tuple(num_type, buffer, E_PARSE_FAIL);
         return make_tuple(num_type, buffer, E_OK);
     }
 
     bool Lexer::is_valid_char_num(char c) {
         c = static_cast<char>(tolower(c));
         return isdigit(c) || ('a' <= c && c <= 'f') || c == '.' || c == 'x';
+    }
+
+    // TODO
+    TokenType Lexer::get_operator(const string &line, const int &len, int &i) {
+        return TOK_ASSIGN;
     }
 }
