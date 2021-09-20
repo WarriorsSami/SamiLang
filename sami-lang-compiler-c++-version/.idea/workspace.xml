@@ -11,7 +11,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a82ec21-af6a-4726-927a-002311970a51" name="Changes" comment="" />
+    <list default="true" id="3a82ec21-af6a-4726-927a-002311970a51" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,11 +85,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="sami_lang_compiler_c___version" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="file.sm" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sami_lang_compiler_c___version" TARGET_NAME="sami_lang_compiler_c___version" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="sami_lang_compiler_c___version" RUN_TARGET_NAME="sami_lang_compiler_c___version">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -108,7 +106,8 @@
       <workItem from="1631343988630" duration="9952000" />
       <workItem from="1631546880149" duration="8275000" />
       <workItem from="1631689979208" duration="988000" />
-      <workItem from="1631727249143" duration="646000" />
+      <workItem from="1631727249143" duration="709000" />
+      <workItem from="1632153222675" duration="4000" />
     </task>
     <servers />
   </component>
