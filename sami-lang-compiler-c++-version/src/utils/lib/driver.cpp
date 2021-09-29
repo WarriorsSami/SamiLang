@@ -13,8 +13,8 @@ namespace samilang {
     Driver::Driver(const string &file_name): Lex(make_unique<Lexer>(file_name)) {}
 
     void Driver::launch() const {
-        LexerExceptions res = Lex->tokenize();
-        handle(res);
+        CustomException res = Lex->tokenize();
+        handleCustomErr(res);
         Lex->test();
     }
 
@@ -34,6 +34,13 @@ namespace samilang {
                 exit(1);
             }
                 break;
+        }
+    }
+
+    void Driver::handleCustomErr(const CustomException& err) {
+        cout << err.displayError() << "\n";
+        if (err.err_code != E_OK) {
+            exit(1);
         }
     }
 }

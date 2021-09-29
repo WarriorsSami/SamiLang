@@ -13,4 +13,5 @@ fntn main :: (argc: int, argv: Vec<str>) => (bare) {
 
     let nr = 0x3f3f3f3f;
     var nr_real: float = 20.002;
+    let nr2 = 0b0011100;
 }

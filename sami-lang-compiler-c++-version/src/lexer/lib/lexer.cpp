@@ -12,7 +12,9 @@
 #define CURR(line) (line[i])
 #define NEXT(line, i) (i + 1 < len ? line[i + 1] : 0)
 #define PREV(line) (!line.empty() && i - 1 >= 0 ? line[i - 1] : 0)
-
+#define SET_OP_BREAK(token) \
+        op = token;         \
+        break
 
 namespace samilang::lexer {
     using namespace std;
@@ -133,21 +135,23 @@ namespace samilang::lexer {
             cout << item.tokenToStr() << "\n";
     }
 
-    LexerExceptions Lexer::tokenize() {
+    CustomException Lexer::tokenize() {
         // tokenize the input string src
         for (int i = 0; i < srcList.size(); ++i) {
             const string& line = srcList[i];
-            LexerExceptions res = tokenizeLine(line, static_cast<int>(line.size()), i + 1);
-            if (res != E_OK) return res;
+            CustomException res = tokenizeLine(line, static_cast<int>(line.size()), i + 1);
+            if (res.err_code != E_OK) return res;
         }
 
-        if (this->comment_block_remainder) return E_LEX_FAIL;
-        return E_OK;
+        if (this->comment_block_remainder) return {E_LEX_FAIL, (int)srcList.size(),
+                                                   string(to_string(this->comment_block_remainder))
+                                                   + " comment blocks not closed found!"};
+        return {E_OK, -1, "Everything is OK!"};
     }
 
-    LexerExceptions Lexer::tokenizeLine(const string &line, const int &len, const int& num_line) {
+    CustomException Lexer::tokenizeLine(const string &line, const int &len, const int& num_line) {
         int i = 0;
-        LexerExceptions res = E_OK;
+        CustomException res = {E_OK, -1, "Everything is OK!"};
         static int comment_block = 0;
 
         while (i < len) {
@@ -167,7 +171,9 @@ namespace samilang::lexer {
             if (CURR(line) == '@' && NEXT(line, i) == '/') {
                 // exit with `lex error` if there is no comment_block opened
                 if (!comment_block) {
-                    res = E_LEX_FAIL;
+                    res = {E_LEX_FAIL, num_line, "No matching `init comment block character` found "
+                                          "for the current `exit comment block character` at column "
+                                          + to_string(i + 1) + "!"};
                     break;
                 }
                 i += 2, --comment_block;
@@ -189,8 +195,8 @@ namespace samilang::lexer {
 
             // string encountered (identifier or keyword)
             if (isalpha(CURR(line)) || CURR(line) == '_') {
-                auto [str, err] = get_name(line, len, i);
-                if (err != E_OK) {
+                auto [str, err] = get_name(line, len, i, num_line);
+                if (err.err_code != E_OK) {
                     res = err;
                     break;
                 }
@@ -201,8 +207,8 @@ namespace samilang::lexer {
 
             // literal string encountered
             if (CURR(line) == '\"' || CURR(line) == '\'') {
-                auto [str, err] = get_string(line, len, i);
-                if (err != E_OK) {
+                auto [str, err] = get_string(line, len, i, num_line);
+                if (err.err_code != E_OK) {
                     res = err;
                     break;
                 }
@@ -212,8 +218,8 @@ namespace samilang::lexer {
 
             // literal number encountered
             if (isdigit(CURR(line))) {
-                auto [nr_type, nr, err] = get_number(line, len, i);
-                if (err != E_OK) {
+                auto [nr_type, nr, err] = get_number(line, len, i, num_line);
+                if (err.err_code != E_OK) {
                     res = err;
                     break;
                 }
@@ -235,14 +241,16 @@ namespace samilang::lexer {
         return res;
     }
 
-    str_err Lexer::get_name(const string &line, const int &len, int &i) {
+    str_err Lexer::get_name(const string &line, const int &len, int &i, const int& num_line) {
         string buffer;
         while ((isalnum(CURR(line)) || CURR(line) == '_') && i < len) {
             buffer.push_back(CURR(line)), ++i;
         }
         if (buffer.empty())
-            return make_pair(buffer, E_PARSE_FAIL);
-        return make_pair(buffer, E_OK);
+            return make_pair(buffer, CustomException(E_PARSE_FAIL, num_line,
+                                                     "Empty identifier/keyword found at column "
+                                                     + to_string(i + 1) + "!"));
+        return make_pair(buffer, CustomException(E_OK, -1, "Everything is OK!"));
     }
 
     TokenType Lexer::tag_name(const string &str) {
@@ -257,7 +265,7 @@ namespace samilang::lexer {
         else return static_cast<TokenType>(distance(begin(TokenValues), key));
     }
 
-    str_err Lexer::get_string(const string &line, const int &len, int &i) {
+    str_err Lexer::get_string(const string &line, const int &len, int &i, const int& num_line) {
         string buffer;
         const char quote_type = CURR(line);
         // skip beginning quote
@@ -266,13 +274,16 @@ namespace samilang::lexer {
             buffer.push_back(CURR(line)), ++i;
         }
         if (CURR(line) != quote_type)
-            return make_pair(buffer, E_LEX_FAIL);
+            return make_pair(buffer,
+                             CustomException(E_LEX_FAIL, num_line, "No ending quote found for string "
+                                                                   "literal at column " + to_string(i + 1) + "!"));
         if (buffer.empty())
-            return make_pair(buffer, E_PARSE_FAIL);
+            return make_pair(buffer, CustomException(E_PARSE_FAIL, num_line, "Empty string literal found a"
+                                                                             "t column " + to_string(i + 1) + "!"));
         // skip ending quote
         ++i;
         remove_back_slash(buffer);
-        return make_pair(buffer, E_OK);
+        return make_pair(buffer, CustomException(E_OK, -1, "Everything is OK!"));
     }
 
     void Lexer::remove_back_slash(string &str) {
@@ -288,58 +299,125 @@ namespace samilang::lexer {
         }
     }
 
-    nr_err Lexer::get_number(const string &line, const int &len, int &i) {
+    nr_err Lexer::get_number(const string &line, const int &len, int &i, const int& num_line) {
         string buffer;
         TokenType num_type = TOK_INT;
-        bool dot_encountered = false;
-        int starting_index = i;
+        bool read_base = false;
+        int starting_index = i,
+            base = 10,
+            dot_encountered = -1;
 
-        while (is_valid_char_num(CURR(line)) && i < len) {
+        while (i < len) {
             const char curr = CURR(line),
                        next = NEXT(line, i);
 
-            switch (curr) {
-                case '0':
-                case '1':
-                case '2':
-                case '3':
-                case '4':
-                case '5':
-                case '6':
-                case '7':
-                case '8':
-                case '9':
+            switch(curr) {
+            case 'x': case 'X': {
+                if (read_base) {
+                    base = 16;
+                    read_base = false;
                     break;
-                case '.': {
-                    if (!dot_encountered) {
-                        dot_encountered = true;
-                        if (isdigit(next))
-                            num_type = TOK_FLOAT;
-                        else return make_tuple(num_type, buffer, E_OK);
+                }
+                goto fail;
+            }
+            case 'f': case 'F':
+            case 'e': case 'E':
+            case 'd': case 'D':
+            case 'c': case 'C':
+            case 'b': case 'B': {
+                if (read_base) {
+                    if (curr == 'b' || curr == 'B') {
+                        base = 2;
+                        read_base = false;
+                        break;
                     } else {
-                        return make_tuple(num_type, buffer, E_PARSE_FAIL);
+                        goto fail;
                     }
                 }
+            }
+            case 'a': case 'A': {
+                if (base == 16) break;
+                goto fail;
+            }
+            case '9': case '8': {
+                if (base > 8) break;
+                goto fail;
+            }
+            case '7': case '6':
+            case '5': case '4':
+            case '3': case '2': {
+                if (base > 2) break;
+                goto fail;
+            }
+            case '1': {
+                read_base = false;
+                break;
+            }
+            case '0': {
+                if (i == starting_index) {
+                    base = 8;
+                    read_base = true;
                     break;
-                default: {
-                    if (curr == 'x' && i - starting_index != 1)
-                        return make_tuple(num_type, buffer, E_PARSE_FAIL);
+                }
+                read_base = false;
+                break;
+            }
+            case '.': {
+                /// dot encountered when base is different than 10
+                if (!read_base && base != 10) {
+                    return make_tuple(num_type, buffer,
+                                      CustomException(E_PARSE_FAIL, num_line,
+                                                      "Dot encountered when base is different than 10 ("
+                                                      + to_string(base) + ") at column " + to_string(i + 1) + "!"));
+                /// float number (may be)
+                } else if (dot_encountered == -1) {
+                    if ('0' <= next && next <= '9') {
+                        dot_encountered = i;
+                        num_type = TOK_FLOAT;
+                    } else {
+                        return make_tuple(num_type, buffer,
+                                          CustomException(E_OK, -1, "Everything is OK!"));
+                    }
+                /// dot encountered multiple times when base is 10
+                } else {
+                    return make_tuple(num_type, buffer,
+                                      CustomException(E_PARSE_FAIL, num_line,
+                                                      "Dot encountered multiple times when base is 10: "
+                                                      "now at column " + to_string(i + 1) +
+                                                      " and first at column "+ to_string(dot_encountered) + "!"));
+                }
+                read_base = false;
+                base = 10;
+                break;
+            }
+            default:
+                fail: {
+                    if (isalnum(curr)) {
+                        return make_tuple(num_type, buffer,
+                                          CustomException(E_PARSE_FAIL, num_line,
+                                                          string("Invalid character encountered "
+                                                                 "in numeric literal when base is (")
+                                                                 + to_string(base) + "): " + curr +
+                                                                 " at column " + to_string(i + 1) + "!"));
+                    } else {
+                        return make_tuple(num_type, buffer,
+                                          CustomException(E_OK, -1, "Everything is OK!"));
+                    }
                 }
             }
+
             buffer.push_back(curr), ++i;
         }
         if (buffer.empty())
-            return make_tuple(num_type, buffer, E_PARSE_FAIL);
-        return make_tuple(num_type, buffer, E_OK);
-    }
-
-    bool Lexer::is_valid_char_num(char c) {
-        c = static_cast<char>(tolower(c));
-        return isdigit(c) || ('a' <= c && c <= 'f') || c == '.' || c == 'x';
+            return make_tuple(num_type, buffer,
+                              CustomException(E_PARSE_FAIL, num_line,
+                                              "Empty numeric literal found at column " + to_string(i + 1) + "!"));
+        return make_tuple(num_type, buffer,
+                          CustomException(E_OK, -1, "Everything is OK!"));
     }
 
     // TODO
-    TokenType Lexer::get_operator(const string &line, const int &len, int &i) {
+    TokenType Lexer::get_operator(const string &line, const int &len, int &i, const int& num_line) {
         return TOK_ASSIGN;
     }
 }

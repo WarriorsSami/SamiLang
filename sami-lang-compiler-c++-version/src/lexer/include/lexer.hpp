@@ -19,7 +19,7 @@ namespace samilang::lexer {
     public:
         explicit Lexer(const string& file_name);
         void test() const;
-        LexerExceptions tokenize();
+        CustomException tokenize();
 
     private:
         unique_ptr<FileScanner> Reader;
@@ -29,16 +29,15 @@ namespace samilang::lexer {
         toks tokenList;
         int comment_block_remainder;
 
-        LexerExceptions tokenizeLine(const string& line, const int& len, const int& num_line);
+        CustomException tokenizeLine(const string& line, const int& len, const int& num_line);
 
         // helper methods
-        static str_err get_name(const string& line, const int& len, int& i);
+        static str_err get_name(const string &line, const int &len, int &i, const int& num_line);
         static TokenType tag_name(const string& str);
-        static str_err get_string(const string& line, const int& len, int& i);
+        static str_err get_string(const string& line, const int& len, int& i, const int& num_line);
         static void remove_back_slash(string& str);
-        static nr_err get_number(const string& line, const int& len, int& i);
-        static bool is_valid_char_num(char c);
-        static TokenType get_operator(const string& line, const int& len, int& i);
+        static nr_err get_number(const string& line, const int& len, int& i, const int& num_line);
+        static TokenType get_operator(const string& line, const int& len, int& i, const int& num_line);
     };
 }
 
