@@ -2,6 +2,8 @@
 hello there this is a comment
 @/
 
+invk strmfl;
+
 fntn f1_f2 :: ((a, b): int) => (int) {
     return a + b;
 }
@@ -13,4 +15,8 @@ fntn main :: (argc: int, argv: Vec<str>) => (bare) {
 
     let nr = 0x3f3f3f3f;
     var nr_real: float = 20.002;
+    let nr2 = 0b0011100;
+
+    &(a, b) ::< strmfl.IO("%d%d", stdin);
+    println("%d", f1_f2(a, b));
 }
