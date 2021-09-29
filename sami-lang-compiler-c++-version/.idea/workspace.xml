@@ -17,14 +17,14 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/file_scanner.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/file.sm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/file.sm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sami_lang_compiler_c___version" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sami_lang_compiler_c___version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/include/lexer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/include/lexer.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lexer/include/token.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/include/token.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/lib/lexer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lib/lexer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/include/driver.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/include/driver.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lexer/lib/token.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lib/token.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/include/exceptions.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/include/exceptions.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/lib/driver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/lib/driver.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +125,7 @@
       <workItem from="1631727249143" duration="709000" />
       <workItem from="1632153222675" duration="412000" />
       <workItem from="1632899647541" duration="5411000" />
-      <workItem from="1632905535383" duration="1902000" />
+      <workItem from="1632905535383" duration="7012000" />
     </task>
     <servers />
   </component>
@@ -150,5 +150,6 @@
     <MESSAGE value="refactor(lexer): remove unused methods&#10;&#10;There is no need to remove comments from src code because we have to keep track of the actual position for every token. Also, getters/setters for token class are redundant and can be replaced by simply making lexer class a friend of token one." />
     <MESSAGE value="feat(lexer): add basic functionality&#10;&#10;Lexer is working properly at this time for skipping comments, keywords and identifiers. Also, find some good place for TokenValues vector!!!" />
     <MESSAGE value="bug(token): solve memory leak&#10;&#10;Token's method - tokenToStr() - needs template string to be initialized with dynamic size related to value.size() also in order to avoid overflow." />
+    <MESSAGE value="fixed+refactor(numeric literal): add numeric base parser&#10;&#10;I've switched from general lexer exceptions to custom exceptions to improve scalability and the debugging process. Also, the numeric literal's parser is now complete." />
   </component>
 </project>

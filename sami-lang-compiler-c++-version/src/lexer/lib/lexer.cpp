@@ -13,7 +13,7 @@
 #define NEXT(line, i) (i + 1 < len ? line[i + 1] : 0)
 #define PREV(line) (!line.empty() && i - 1 >= 0 ? line[i - 1] : 0)
 #define SET_OP_BREAK(token) \
-        op = token;         \
+        op_type = token;    \
         break
 
 namespace samilang::lexer {
@@ -59,6 +59,8 @@ namespace samilang::lexer {
             "=",
             "+=",
             "-=",
+            "++",
+            "--",
             "*=",
             "/=",
             "%=",
@@ -107,8 +109,6 @@ namespace samilang::lexer {
             "}",
             "[",
             "]",
-            "<",
-            ">",
 
             "::<",
             "::>",
@@ -228,13 +228,12 @@ namespace samilang::lexer {
             }
 
             // operator encountered
-            /*TokenType op_type = get_operator(line, len, i);
+            auto [op_type, err] = get_operator(line, len, i, num_line);
             if (op_type < 0) {
-                res = E_LEX_FAIL;
+                res = err;
                 break;
             }
-            tokenList.emplace_back(make_pair(num_line, tmp_col), op_type, TokenValues[op_type]);*/
-            ++i;
+            tokenList.emplace_back(make_pair(num_line, tmp_col), op_type, TokenValues[op_type]);
         }
 
         this->comment_block_remainder = comment_block;
@@ -417,7 +416,237 @@ namespace samilang::lexer {
     }
 
     // TODO
-    TokenType Lexer::get_operator(const string &line, const int &len, int &i, const int& num_line) {
-        return TOK_ASSIGN;
+    op_err Lexer::get_operator(const string &line, const int &len, int &i, const int& num_line) {
+        int op_type = -1;
+        CustomException err = {E_OK, -1, "Everything is OK!"};
+        switch(CURR(line)) {
+            case '+': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_PLUS_ASSIGN);
+                    }
+                    if (NEXT(line, i) == '+') {
+                        ++i;
+                        SET_OP_BREAK(TOK_INC);
+                    }
+                }
+                SET_OP_BREAK(TOK_PLUS);
+            }
+            case '-': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_MINUS_ASSIGN);
+                    }
+                    if (NEXT(line, i) == '-') {
+                        ++i;
+                        SET_OP_BREAK(TOK_DEC);
+                    }
+                    if (NEXT(line, i) == '>') {
+                        ++i;
+                        SET_OP_BREAK(TOK_SIMPLE_ARROW);
+                    }
+                }
+                SET_OP_BREAK(TOK_MINUS);
+            }
+            case '*': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_MUL_ASSIGN);
+                    }
+                    if (NEXT(line, i) == '*') {
+                        ++i;
+                        if (i < len - 1) {
+                            if (NEXT(line, i) == '=') {
+                                ++i;
+                                SET_OP_BREAK(TOK_PWR_ASSIGN);
+                            }
+                        }
+                        SET_OP_BREAK(TOK_PWR);
+                    }
+                }
+                SET_OP_BREAK(TOK_MUL);
+            }
+            case '/': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_DIV_ASSIGN);
+                    }
+                }
+                SET_OP_BREAK(TOK_DIV);
+            }
+            case '%': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_MOD_ASSIGN);
+                    }
+                }
+                SET_OP_BREAK(TOK_MOD);
+            }
+            case '&': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_AND_ASSIGN);
+                    }
+                    if (NEXT(line, i) == '&') {
+                        ++i;
+                        SET_OP_BREAK(TOK_LAND);
+                    }
+                }
+                SET_OP_BREAK(TOK_AND);
+            }
+            case '|': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_OR_ASSIGN);
+                    }
+                    if (NEXT(line, i) == '|') {
+                        ++i;
+                        SET_OP_BREAK(TOK_LOR);
+                    }
+                }
+                SET_OP_BREAK(TOK_OR);
+            }
+            case '^': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_XOR_ASSIGN);
+                    }
+                }
+                SET_OP_BREAK(TOK_XOR);
+            }
+            case '!': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_NOT_EQ);
+                    }
+                }
+                SET_OP_BREAK(TOK_LNOT);
+            }
+            case '<': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_LESS_EQ);
+                    }
+                    if (NEXT(line, i) == '<') {
+                        ++i;
+                        if (i < len - 1) {
+                            if (NEXT(line, i) == '=') {
+                                ++i;
+                                SET_OP_BREAK(TOK_SHL_ASSIGN);
+                            }
+                        }
+                        SET_OP_BREAK(TOK_SHL);
+                    }
+                }
+                SET_OP_BREAK(TOK_LESS);
+            }
+            case '>': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_GREATER_EQ);
+                    }
+                    if (NEXT(line, i) == '>') {
+                        ++i;
+                        if (i < len - 1) {
+                            if (NEXT(line, i) == '=') {
+                                ++i;
+                                SET_OP_BREAK(TOK_SHR_ASSIGN);
+                            }
+                        }
+                        SET_OP_BREAK(TOK_SHR);
+                    }
+                }
+                SET_OP_BREAK(TOK_GREATER);
+            }
+            case '=': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == '=') {
+                        ++i;
+                        SET_OP_BREAK(TOK_EQ);
+                    }
+                    if (NEXT(line, i) == '>') {
+                        ++i;
+                        SET_OP_BREAK(TOK_DOUBLE_ARROW);
+                    }
+                }
+                SET_OP_BREAK(TOK_ASSIGN);
+            }
+            case ':': {
+                if (i < len - 1) {
+                    if (NEXT(line, i) == ':') {
+                        ++i;
+                        if (i < len - 1) {
+                            if (NEXT(line, i) == '>') {
+                                ++i;
+                                SET_OP_BREAK(TOK_COUT);
+                            }
+                            if (NEXT(line, i) == '<') {
+                                ++i;
+                                SET_OP_BREAK(TOK_CIN);
+                            }
+                        }
+                        SET_OP_BREAK(TOK_DOUBLE_COLON);
+                    }
+                }
+                SET_OP_BREAK(TOK_COLON);
+            }
+            case '~': {
+                SET_OP_BREAK(TOK_NOT);
+            }
+            case ';': {
+                SET_OP_BREAK(TOK_SEMI_COLON);
+            }
+            case ',': {
+                SET_OP_BREAK(TOK_COMMA);
+            }
+            case '.': {
+                SET_OP_BREAK(TOK_DOT);
+            }
+            case '(': {
+                SET_OP_BREAK(TOK_LPARAN);
+            }
+            case ')': {
+                SET_OP_BREAK(TOK_RPARAN);
+            }
+            case '[': {
+                SET_OP_BREAK(TOK_LRBRK);
+            }
+            case ']': {
+                SET_OP_BREAK(TOK_RRBRK);
+            }
+            case '{': {
+                SET_OP_BREAK(TOK_LBRK);
+            }
+            case '}': {
+                SET_OP_BREAK(TOK_RBRK);
+            }
+            case ' ': {
+                SET_OP_BREAK(TOK_SPC);
+            }
+            case '\t': {
+                SET_OP_BREAK(TOK_TAB);
+            }
+            case '\n': {
+                SET_OP_BREAK(TOK_NEWL);
+            }
+            default: {
+                op_type = -1;
+                err = {E_LEX_FAIL, num_line, "Invalid operator found at column " + to_string(i) + "!"};
+            }
+        }
+
+        ++i;
+        return make_pair(static_cast<TokenType>(op_type), err);
     }
 }

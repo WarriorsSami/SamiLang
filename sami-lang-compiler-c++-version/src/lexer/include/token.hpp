@@ -58,6 +58,8 @@ namespace samilang::lexer {
         TOK_ASSIGN,
         TOK_PLUS_ASSIGN,
         TOK_MINUS_ASSIGN,
+        TOK_INC,
+        TOK_DEC,
         TOK_MUL_ASSIGN,
         TOK_DIV_ASSIGN,
         TOK_MOD_ASSIGN,
@@ -111,8 +113,6 @@ namespace samilang::lexer {
         TOK_RBRK,
         TOK_LRBRK,
         TOK_RRBRK,
-        TOK_LARR,
-        TOK_RARR,
 
         // others
         TOK_CIN,

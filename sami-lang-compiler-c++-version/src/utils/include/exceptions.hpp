@@ -56,6 +56,7 @@ namespace samilang {
 
     using str_err = pair<string, CustomException>;
     using nr_err = tuple<lexer::TokenType, string, CustomException>;
+    using op_err = pair<lexer::TokenType, CustomException>;
 }
 
 #endif //SAMI_LANG_COMPILER_C___VERSION_EXCEPTIONS_HPP

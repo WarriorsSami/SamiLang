@@ -37,7 +37,7 @@ namespace samilang::lexer {
         static str_err get_string(const string& line, const int& len, int& i, const int& num_line);
         static void remove_back_slash(string& str);
         static nr_err get_number(const string& line, const int& len, int& i, const int& num_line);
-        static TokenType get_operator(const string& line, const int& len, int& i, const int& num_line);
+        static op_err get_operator(const string& line, const int& len, int& i, const int& num_line);
     };
 }
 
