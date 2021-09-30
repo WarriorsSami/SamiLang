@@ -415,7 +415,6 @@ namespace samilang::lexer {
                           CustomException(E_OK, -1, "Everything is OK!"));
     }
 
-    // TODO
     op_err Lexer::get_operator(const string &line, const int &len, int &i, const int& num_line) {
         int op_type = -1;
         CustomException err = {E_OK, -1, "Everything is OK!"};
