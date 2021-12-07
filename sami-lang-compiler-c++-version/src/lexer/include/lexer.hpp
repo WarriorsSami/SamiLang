@@ -18,7 +18,7 @@ namespace samilang::lexer {
     class Lexer {
     public:
         explicit Lexer(const string& file_name);
-        void test() const;
+        void getTokens() const;
         CustomException tokenize();
 
     private:

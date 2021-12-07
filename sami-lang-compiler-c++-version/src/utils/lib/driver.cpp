@@ -15,7 +15,7 @@ namespace samilang {
     void Driver::launch() const {
         CustomException res = Lex->tokenize();
         handleCustomErr(res);
-        Lex->test();
+        Lex->getTokens();
     }
 
     void Driver::handle(LexerExceptions err) {
@@ -37,6 +37,7 @@ namespace samilang {
         }
     }
 
+    // TODO: refactoring needed to handle custom exception using try-catch-throw
     void Driver::handleCustomErr(const CustomException& err) {
         cout << err.displayError() << "\n";
         if (err.err_code != E_OK) {

@@ -13,18 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3a82ec21-af6a-4726-927a-002311970a51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/lexer/lib/lexer.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/sami_lang_compiler_c___version.dir/src/utils/lib/driver.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/file.sm" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/file.sm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sami_lang_compiler_c___version" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sami_lang_compiler_c___version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lexer/include/lexer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/include/lexer.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lexer/include/token.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/include/token.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lexer/lib/lexer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lib/lexer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lexer/lib/token.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lib/token.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/include/exceptions.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/include/exceptions.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/lib/driver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/lib/driver.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +37,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="lexer" />
-                    <option name="lastUsedInstant" value="1632899685" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1632912839" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1632153287" />
+                    <option name="branchName" value="lexer" />
+                    <option name="lastUsedInstant" value="1632899685" />
                   </RecentBranch>
                 </list>
               </option>
@@ -125,7 +115,14 @@
       <workItem from="1631727249143" duration="709000" />
       <workItem from="1632153222675" duration="412000" />
       <workItem from="1632899647541" duration="5411000" />
-      <workItem from="1632905535383" duration="7012000" />
+      <workItem from="1632905535383" duration="7292000" />
+      <workItem from="1632997347663" duration="429000" />
+      <workItem from="1635528565025" duration="264000" />
+      <workItem from="1635529217567" duration="70000" />
+      <workItem from="1635923121842" duration="45000" />
+      <workItem from="1635923189246" duration="143000" />
+      <workItem from="1635948180189" duration="63000" />
+      <workItem from="1638860772447" duration="706000" />
     </task>
     <servers />
   </component>

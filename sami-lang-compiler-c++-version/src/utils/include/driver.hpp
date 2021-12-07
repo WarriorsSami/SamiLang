@@ -14,7 +14,8 @@ namespace samilang {
     using namespace std;
     using namespace lexer;
 
-    // main driver class for the entire compiler
+    // main driver class for the entire compiler (using facade pattern)
+    // Lexer, Parser, Semantic Analyzer, Code Generator (LLVM)
     class Driver {
     public:
         explicit Driver(const string& file_name);

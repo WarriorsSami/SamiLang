@@ -129,7 +129,7 @@ namespace samilang::lexer {
         tie(src, srcList) = code;
     }
 
-    void Lexer::test() const {
+    void Lexer::getTokens() const {
         cout << tokenList.size() << "\n";
         for (const auto& item: tokenList)
             cout << item.tokenToStr() << "\n";
