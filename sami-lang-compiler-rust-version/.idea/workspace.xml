@@ -11,7 +11,16 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8a0ec2f-470a-483b-9e58-3343c78614ee" name="Changes" comment="" />
+    <list default="true" id="d8a0ec2f-470a-483b-9e58-3343c78614ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lexer/lexer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lexer.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lexer/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lexer/token.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/token.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,61 +62,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.9005625360735354" />
-      <entry key="MS500" value="3.943549644542693" />
-      <entry key="S2" value="7.107888785656257" />
-      <entry key="S5" value="11.248860816695993" />
-      <entry key="S10" value="13.988922428556448" />
-      <entry key="S30" value="16.56968153819023" />
-      <entry key="S60" value="18.404482816816184" />
-      <entry key="M2" value="24.884772851863598" />
-      <entry key="M5" value="46.485114247639636" />
-      <entry key="M10" value="70.35247765403722" />
-      <entry key="M15" value="88.6417562930983" />
-      <entry key="M30" value="132.75544923231934" />
-      <entry key="H1" value="193.90659389441421" />
-      <entry key="H2" value="268.2603161840837" />
-      <entry key="H4" value="337.7517970661155" />
-      <entry key="D1" value="429.2688468141283" />
-      <entry key="W1" value="449.4753043126224" />
+      <entry key="MS100" value="1.000000000018292" />
+      <entry key="MS500" value="1.0071298271454752" />
+      <entry key="S2" value="1.373793885307531" />
+      <entry key="S5" value="2.2851305183350434" />
+      <entry key="S10" value="3.494740002973108" />
+      <entry key="S30" value="6.881435129739146" />
+      <entry key="S60" value="11.060939167118933" />
+      <entry key="M2" value="17.90698735578364" />
+      <entry key="M5" value="31.893211250702777" />
+      <entry key="M10" value="51.6567605331525" />
+      <entry key="M15" value="71.00848431074412" />
+      <entry key="M30" value="131.4734742495226" />
+      <entry key="H1" value="242.7569607749558" />
+      <entry key="H2" value="392.47360361570725" />
+      <entry key="H4" value="540.0073179666605" />
+      <entry key="D1" value="747.5307852705372" />
+      <entry key="W1" value="795.5422504995859" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="1.904900681954904E-110" />
-      <entry key="S5" value="1.8597256341851915E-44" />
-      <entry key="S10" value="1.9121671977067071E-22" />
-      <entry key="S30" value="9.7534909271029E-8" />
-      <entry key="S60" value="5.173213593112722E-4" />
-      <entry key="M2" value="0.04151291480101709" />
-      <entry key="M5" value="0.6517091323247135" />
-      <entry key="M10" value="2.393875800290091" />
-      <entry key="M15" value="5.032208006195755" />
-      <entry key="M30" value="14.50578243783206" />
-      <entry key="H1" value="29.68342901044234" />
-      <entry key="H2" value="47.32087197990505" />
-      <entry key="H4" value="62.759351716003444" />
-      <entry key="D1" value="82.11003525524178" />
-      <entry key="W1" value="86.27645120848635" />
+      <entry key="MS100" value="2.855786378492394E-85" />
+      <entry key="MS500" value="1.2336059268501323E-17" />
+      <entry key="S2" value="6.484607660560785E-5" />
+      <entry key="S5" value="0.030611188746045924" />
+      <entry key="S10" value="0.29950729529458797" />
+      <entry key="S30" value="1.7202813292389947" />
+      <entry key="S60" value="3.1839511694130245" />
+      <entry key="M2" value="5.158562318472893" />
+      <entry key="M5" value="8.50504717721622" />
+      <entry key="M10" value="13.656059803742489" />
+      <entry key="M15" value="19.301662568411228" />
+      <entry key="M30" value="36.03556059926545" />
+      <entry key="H1" value="63.25450846290867" />
+      <entry key="H2" value="97.64230256161821" />
+      <entry key="H4" value="130.36123556294658" />
+      <entry key="D1" value="175.04996614036332" />
+      <entry key="W1" value="185.21512087563548" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.724184025868142" />
-      <entry key="MS500" value="3.861626092069391" />
-      <entry key="S2" value="7.073901941085871" />
-      <entry key="S5" value="11.228736048891449" />
-      <entry key="S10" value="13.976701286174025" />
-      <entry key="S30" value="16.564931200059586" />
-      <entry key="S60" value="18.402377919151675" />
-      <entry key="M2" value="24.923623152205355" />
-      <entry key="M5" value="47.12810431878312" />
-      <entry key="M10" value="72.73095830557824" />
-      <entry key="M15" value="93.65326150426483" />
-      <entry key="M30" value="147.23339489777337" />
-      <entry key="H1" value="223.5626666594668" />
-      <entry key="H2" value="315.55972357320206" />
-      <entry key="H4" value="400.49698117411776" />
-      <entry key="D1" value="511.37579766528336" />
-      <entry key="W1" value="535.7512925565222" />
+      <entry key="MS100" value="0.00689611715852074" />
+      <entry key="MS500" value="0.3696068334693007" />
+      <entry key="S2" value="0.9014939445675373" />
+      <entry key="S5" value="1.8429603101845518" />
+      <entry key="S10" value="3.3903828624335604" />
+      <entry key="S30" value="8.336000647647442" />
+      <entry key="S60" value="14.037563195907461" />
+      <entry key="M2" value="22.900816243119145" />
+      <entry key="M5" value="40.287739741848675" />
+      <entry key="M10" value="65.22517555155467" />
+      <entry key="M15" value="90.22820711622406" />
+      <entry key="M30" value="167.4340944893212" />
+      <entry key="H1" value="305.9478570508349" />
+      <entry key="H2" value="490.06822628088196" />
+      <entry key="H4" value="670.3372794091077" />
+      <entry key="D1" value="922.5738554312522" />
+      <entry key="W1" value="980.7563315802612" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -135,7 +144,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "copilot.chat.legacySessionMetadata.migrated": "true",
-    "git-widget-placeholder": "8471dcb9",
+    "git-widget-placeholder": "458e1735",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Volumes/MacOS-Ext/Development/SamiLang/sami-lang-compiler-rust-version",
     "node.js.detected.package.eslint": "true",
@@ -145,6 +154,7 @@
     "nodejs_package_manager_path": "npm",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
     "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -204,6 +214,7 @@
       <updated>1631035280764</updated>
       <workItem from="1631035282678" duration="2000" />
       <workItem from="1785951880631" duration="8676000" />
+      <workItem from="1786027248658" duration="7308000" />
     </task>
     <servers />
   </component>

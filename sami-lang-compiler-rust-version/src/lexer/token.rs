@@ -1,9 +1,11 @@
-#[derive(Debug, Eq, PartialEq, Hash)]
+use phf::phf_map;
+
+#[derive(Debug, Clone, Eq, PartialEq, Hash)]
 pub enum Token<'t> {
     Eof,
     // identifiers + literals
     Ident(&'t [u8]),
-    Int(i32),
+    Int(&'t [u8]),
     // operators
     Assign,
     Plus,
@@ -33,3 +35,8 @@ pub enum Token<'t> {
     Else,
     Return,
 }
+
+pub static KEYWORDS: phf::Map<&'static [u8], Token> = phf_map! {
+    b"let" => Token::Let,
+    b"fn" => Token::Function,
+};
