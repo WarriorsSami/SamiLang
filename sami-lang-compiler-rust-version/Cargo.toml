@@ -6,6 +6,8 @@ edition = "2024"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+phf = { version = "0.14.0", features = ["macros"] }
+thiserror = "2.0.19"
 
 [dev-dependencies]
 pretty_assertions = "1.4.1"
