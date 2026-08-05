@@ -1,47 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml">
+      <package file="$PROJECT_DIR$">
+        <feature name="default" enabled="true" />
+      </package>
+    </cargoProject>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d8a0ec2f-470a-483b-9e58-3343c78614ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../sami-lang-compiler-c++-version/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sami-lang-compiler-c++-version/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/.idea/sami-lang-compiler.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/3.20.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/3.20.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir/C.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/CMakeFiles/sami_lang_compiler.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/sami_lang_compiler" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/cmake-build-debug/sami_lang_compiler.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sami-lang-compiler/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/.rustc_info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/sami-lang-compiler-rust-version-612bd2a190ba0c53/output-test-bin-sami-lang-compiler-rust-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/debug/.fingerprint/sami-lang-compiler-rust-version-a035f99e2aa555c3/dep-test-bin-sami-lang-compiler-rust-version" beforeDir="false" afterPath="$PROJECT_DIR$/target/debug/.fingerprint/sami-lang-compiler-rust-version-a035f99e2aa555c3/dep-test-bin-sami-lang-compiler-rust-version" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,34 +26,176 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Volumes/MacOS-Ext/Development/SamiLang/sami-lang-compiler-rust-version" value="3HVSjImW7aDQoirzB8L7xbFOOOe" />
+    </persistenceIdMap>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:test" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;WarriorsSami&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:WarriorsSami/SamiLang.git&quot;,
+    &quot;accountId&quot;: &quot;c50257fb-fe69-4b21-bddd-36e427055dec&quot;
+  }
+}</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="jOUJb3DY" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.6943968794727586" />
+      <entry key="MS500" value="3.3156413752978464" />
+      <entry key="S2" value="4.442915952392264" />
+      <entry key="S5" value="4.763042674454409" />
+      <entry key="S10" value="4.905616860190909" />
+      <entry key="S30" value="8.566680295331306" />
+      <entry key="S60" value="17.92123802698933" />
+      <entry key="M2" value="30.77004647628505" />
+      <entry key="M5" value="50.35149546633943" />
+      <entry key="M10" value="68.16566320307531" />
+      <entry key="M15" value="83.3855284735845" />
+      <entry key="M30" value="123.45020488126838" />
+      <entry key="H1" value="181.15081513612773" />
+      <entry key="H2" value="252.4629094057046" />
+      <entry key="H4" value="319.3267156460784" />
+      <entry key="D1" value="407.2448584724916" />
+      <entry key="W1" value="426.62146339758607" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.2755891572516803E-261" />
+      <entry key="S2" value="8.576444056589291E-66" />
+      <entry key="S5" value="1.35152114910619E-26" />
+      <entry key="S10" value="1.6300947480198276E-13" />
+      <entry key="S30" value="9.248168752421625E-5" />
+      <entry key="S60" value="0.015929723616476335" />
+      <entry key="M2" value="0.2303600390634925" />
+      <entry key="M5" value="1.2934313196136162" />
+      <entry key="M10" value="3.3724568180624055" />
+      <entry key="M15" value="6.323950177593445" />
+      <entry key="M30" value="16.261330895120132" />
+      <entry key="H1" value="31.42834650989702" />
+      <entry key="H2" value="48.69187188748865" />
+      <entry key="H4" value="63.66200535315967" />
+      <entry key="D1" value="82.30569432182742" />
+      <entry key="W1" value="86.30579085525767" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.5699490711520516" />
+      <entry key="MS500" value="3.264533971383537" />
+      <entry key="S2" value="4.4254829301690455" />
+      <entry key="S5" value="4.7555363749592265" />
+      <entry key="S10" value="4.901750940234575" />
+      <entry key="S30" value="8.564642316620443" />
+      <entry key="S60" value="17.934417638588002" />
+      <entry key="M2" value="30.99316990292017" />
+      <entry key="M5" value="51.62878509382545" />
+      <entry key="M10" value="71.5168585538872" />
+      <entry key="M15" value="89.6837186963008" />
+      <entry key="M30" value="139.68044630458766" />
+      <entry key="H1" value="212.55025254706385" />
+      <entry key="H2" value="301.132721768814" />
+      <entry key="H4" value="382.9743629279163" />
+      <entry key="D1" value="489.54746323515894" />
+      <entry key="W1" value="512.9267914437912" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3HVSjImW7aDQoirzB8L7xbFOOOe" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
-  </component>
-  <component name="RunManager">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Cargo.Run.executor": "Run",
+    "Cargo.Test lexer::lexer_tests::lexer_scan_test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "06a92492",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Volumes/MacOS-Ext/Development/SamiLang/sami-lang-compiler-rust-version",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Cargo.Test lexer::lexer_tests::lexer_scan_test">
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package sami-lang-compiler-rust-version --bin sami-lang-compiler-rust-version" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="false" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
       <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
       <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
-      <envs />
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test lexer::lexer_tests::lexer_scan_test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="buildProfileId" value="test" />
+      <option name="command" value="test --package sami-lang-compiler-rust-version --bin sami-lang-compiler-rust-version -- lexer::lexer_tests::lexer_scan_test --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo.Test lexer::lexer_tests::lexer_scan_test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -92,7 +209,34 @@
       <option name="presentableId" value="Default" />
       <updated>1631035280764</updated>
       <workItem from="1631035282678" duration="2000" />
+      <workItem from="1785951880631" duration="8676000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
