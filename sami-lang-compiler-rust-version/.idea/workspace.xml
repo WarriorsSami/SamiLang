@@ -12,14 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8a0ec2f-470a-483b-9e58-3343c78614ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/error.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/error.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/lexer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lexer.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/token.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/token.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,61 +59,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.000000000018292" />
-      <entry key="MS500" value="1.0071298271454752" />
-      <entry key="S2" value="1.373793885307531" />
-      <entry key="S5" value="2.2851305183350434" />
-      <entry key="S10" value="3.494740002973108" />
-      <entry key="S30" value="6.881435129739146" />
-      <entry key="S60" value="11.060939167118933" />
-      <entry key="M2" value="17.90698735578364" />
-      <entry key="M5" value="31.893211250702777" />
-      <entry key="M10" value="51.6567605331525" />
-      <entry key="M15" value="71.00848431074412" />
-      <entry key="M30" value="131.4734742495226" />
-      <entry key="H1" value="242.7569607749558" />
-      <entry key="H2" value="392.47360361570725" />
-      <entry key="H4" value="540.0073179666605" />
-      <entry key="D1" value="747.5307852705372" />
-      <entry key="W1" value="795.5422504995859" />
+      <entry key="MS100" value="1.0000977868503576" />
+      <entry key="MS500" value="1.160231552153539" />
+      <entry key="S2" value="1.9588428870608743" />
+      <entry key="S5" value="2.894588071782998" />
+      <entry key="S10" value="4.161717190833185" />
+      <entry key="S30" value="9.67277330733929" />
+      <entry key="S60" value="15.71182847978779" />
+      <entry key="M2" value="22.015317782180386" />
+      <entry key="M5" value="35.36361145312328" />
+      <entry key="M10" value="71.95955682832187" />
+      <entry key="M15" value="114.49390767174063" />
+      <entry key="M30" value="227.35415475321378" />
+      <entry key="H1" value="411.37970945146105" />
+      <entry key="H2" value="708.4993718549008" />
+      <entry key="H4" value="1075.463125198781" />
+      <entry key="D1" value="1716.621345499025" />
+      <entry key="W1" value="1885.4659835631273" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.855786378492394E-85" />
-      <entry key="MS500" value="1.2336059268501323E-17" />
-      <entry key="S2" value="6.484607660560785E-5" />
-      <entry key="S5" value="0.030611188746045924" />
-      <entry key="S10" value="0.29950729529458797" />
-      <entry key="S30" value="1.7202813292389947" />
-      <entry key="S60" value="3.1839511694130245" />
-      <entry key="M2" value="5.158562318472893" />
-      <entry key="M5" value="8.50504717721622" />
-      <entry key="M10" value="13.656059803742489" />
-      <entry key="M15" value="19.301662568411228" />
-      <entry key="M30" value="36.03556059926545" />
-      <entry key="H1" value="63.25450846290867" />
-      <entry key="H2" value="97.64230256161821" />
-      <entry key="H4" value="130.36123556294658" />
-      <entry key="D1" value="175.04996614036332" />
-      <entry key="W1" value="185.21512087563548" />
+      <entry key="MS100" value="1.7199318148965593E-162" />
+      <entry key="MS500" value="4.437178363206059E-33" />
+      <entry key="S2" value="8.628675967350156E-9" />
+      <entry key="S5" value="7.791671132842509E-4" />
+      <entry key="S10" value="0.042601684282895895" />
+      <entry key="S30" value="0.9246028249830833" />
+      <entry key="S60" value="2.372499134051391" />
+      <entry key="M2" value="4.1154691394597025" />
+      <entry key="M5" value="7.581637961360254" />
+      <entry key="M10" value="15.18722407919573" />
+      <entry key="M15" value="23.130985048086142" />
+      <entry key="M30" value="43.11408786854536" />
+      <entry key="H1" value="73.48111253765549" />
+      <entry key="H2" value="122.69199112050902" />
+      <entry key="H4" value="187.07636953324976" />
+      <entry key="D1" value="305.3707501694765" />
+      <entry key="W1" value="337.21946669372005" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.00689611715852074" />
-      <entry key="MS500" value="0.3696068334693007" />
-      <entry key="S2" value="0.9014939445675373" />
-      <entry key="S5" value="1.8429603101845518" />
-      <entry key="S10" value="3.3903828624335604" />
-      <entry key="S30" value="8.336000647647442" />
-      <entry key="S60" value="14.037563195907461" />
-      <entry key="M2" value="22.900816243119145" />
-      <entry key="M5" value="40.287739741848675" />
-      <entry key="M10" value="65.22517555155467" />
-      <entry key="M15" value="90.22820711622406" />
-      <entry key="M30" value="167.4340944893212" />
-      <entry key="H1" value="305.9478570508349" />
-      <entry key="H2" value="490.06822628088196" />
-      <entry key="H4" value="670.3372794091077" />
-      <entry key="D1" value="922.5738554312522" />
-      <entry key="W1" value="980.7563315802612" />
+      <entry key="MS100" value="2.3924141957645397E-4" />
+      <entry key="MS500" value="0.23187208199810733" />
+      <entry key="S2" value="1.41322776970925" />
+      <entry key="S5" value="2.600115975945694" />
+      <entry key="S10" value="3.997978509974826" />
+      <entry key="S30" value="10.415134499461017" />
+      <entry key="S60" value="17.92838374010463" />
+      <entry key="M2" value="26.01886228315836" />
+      <entry key="M5" value="42.87382952749699" />
+      <entry key="M10" value="87.07778081139304" />
+      <entry key="M15" value="137.55333407121225" />
+      <entry key="M30" value="270.3960877044072" />
+      <entry key="H1" value="484.79455639499025" />
+      <entry key="H2" value="831.1337486863838" />
+      <entry key="H4" value="1262.4950474227837" />
+      <entry key="D1" value="2021.9799962283757" />
+      <entry key="W1" value="2222.6835430561187" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -135,7 +132,11 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Cargo.Run.executor": "Run",
+    "Cargo.Test lexer::lexer_tests::lex_invalid_escape.executor": "Run",
+    "Cargo.Test lexer::lexer_tests::lex_invalid_token.executor": "Run",
+    "Cargo.Test lexer::lexer_tests::lex_valid_input.executor": "Run",
     "Cargo.Test lexer::lexer_tests::lexer_scan_test.executor": "Run",
+    "Cargo.Test lexer_tests.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -144,7 +145,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "copilot.chat.legacySessionMetadata.migrated": "true",
-    "git-widget-placeholder": "458e1735",
+    "git-widget-placeholder": "7d9db368",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Volumes/MacOS-Ext/Development/SamiLang/sami-lang-compiler-rust-version",
     "node.js.detected.package.eslint": "true",
@@ -159,12 +160,63 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Cargo.Test lexer::lexer_tests::lexer_scan_test">
+  <component name="RunManager" selected="Cargo.Test lexer_tests">
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package sami-lang-compiler-rust-version --bin sami-lang-compiler-rust-version" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
       <option name="emulateTerminal" value="false" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test lexer::lexer_tests::lex_invalid_escape" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package sami-lang-compiler-rust-version --bin sami-lang-compiler-rust-version -- lexer::lexer_tests::lex_invalid_escape --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test lexer::lexer_tests::lex_invalid_token" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package sami-lang-compiler-rust-version --bin sami-lang-compiler-rust-version -- lexer::lexer_tests::lex_invalid_token --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test lexer::lexer_tests::lex_valid_input" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package sami-lang-compiler-rust-version --bin sami-lang-compiler-rust-version -- lexer::lexer_tests::lex_valid_input --exact" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
       <option name="allFeatures" value="false" />
@@ -195,8 +247,29 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test lexer_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package sami-lang-compiler-rust-version --bin sami-lang-compiler-rust-version -- lexer::lexer_tests" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo.Test lexer_tests" />
+        <item itemvalue="Cargo.Test lexer::lexer_tests::lex_valid_input" />
+        <item itemvalue="Cargo.Test lexer::lexer_tests::lex_invalid_escape" />
+        <item itemvalue="Cargo.Test lexer::lexer_tests::lex_invalid_token" />
         <item itemvalue="Cargo.Test lexer::lexer_tests::lexer_scan_test" />
       </list>
     </recent_temporary>
@@ -214,7 +287,8 @@
       <updated>1631035280764</updated>
       <workItem from="1631035282678" duration="2000" />
       <workItem from="1785951880631" duration="8676000" />
-      <workItem from="1786027248658" duration="7308000" />
+      <workItem from="1786027248658" duration="8496000" />
+      <workItem from="1786093296834" duration="11128000" />
     </task>
     <servers />
   </component>
@@ -226,19 +300,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
