@@ -1,11 +1,12 @@
 mod lexer;
-pub mod token;
+mod token;
+mod error;
 
 pub use lexer::Lexer;
 
 #[cfg(test)]
 mod lexer_tests {
-    use crate::error::LexError;
+    use crate::lexer::error::LexError;
     use crate::lexer::Lexer;
     use crate::lexer::token::Token;
     use pretty_assertions::assert_eq;
