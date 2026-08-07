@@ -12,11 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8a0ec2f-470a-483b-9e58-3343c78614ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/repl.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/error.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/error.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/error.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/lexer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/lexer.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lexer/token.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lexer/token.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +35,7 @@
       <entry key="_/Volumes/MacOS-Ext/Development/SamiLang/sami-lang-compiler-rust-version" value="3HVSjImW7aDQoirzB8L7xbFOOOe" />
     </persistenceIdMap>
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:test" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -59,61 +63,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000977868503576" />
-      <entry key="MS500" value="1.160231552153539" />
-      <entry key="S2" value="1.9588428870608743" />
-      <entry key="S5" value="2.894588071782998" />
-      <entry key="S10" value="4.161717190833185" />
-      <entry key="S30" value="9.67277330733929" />
-      <entry key="S60" value="15.71182847978779" />
-      <entry key="M2" value="22.015317782180386" />
-      <entry key="M5" value="35.36361145312328" />
-      <entry key="M10" value="71.95955682832187" />
-      <entry key="M15" value="114.49390767174063" />
-      <entry key="M30" value="227.35415475321378" />
-      <entry key="H1" value="411.37970945146105" />
-      <entry key="H2" value="708.4993718549008" />
-      <entry key="H4" value="1075.463125198781" />
-      <entry key="D1" value="1716.621345499025" />
-      <entry key="W1" value="1885.4659835631273" />
+      <entry key="MS100" value="4.497991543844548E-10" />
+      <entry key="MS500" value="0.013508394239185392" />
+      <entry key="S2" value="0.3409187847960494" />
+      <entry key="S5" value="0.6502332587792301" />
+      <entry key="S10" value="0.8132149819258064" />
+      <entry key="S30" value="1.6633681994139904" />
+      <entry key="S60" value="3.700983167162104" />
+      <entry key="M2" value="7.080694192858974" />
+      <entry key="M5" value="21.74541066755825" />
+      <entry key="M10" value="53.07108739770759" />
+      <entry key="M15" value="85.75064874735408" />
+      <entry key="M30" value="187.51693776467894" />
+      <entry key="H1" value="377.72995542944807" />
+      <entry key="H2" value="694.6371356002234" />
+      <entry key="H4" value="1099.7576359608254" />
+      <entry key="D1" value="1838.1232394768874" />
+      <entry key="W1" value="2037.7100478975915" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.7199318148965593E-162" />
-      <entry key="MS500" value="4.437178363206059E-33" />
-      <entry key="S2" value="8.628675967350156E-9" />
-      <entry key="S5" value="7.791671132842509E-4" />
-      <entry key="S10" value="0.042601684282895895" />
-      <entry key="S30" value="0.9246028249830833" />
-      <entry key="S60" value="2.372499134051391" />
-      <entry key="M2" value="4.1154691394597025" />
-      <entry key="M5" value="7.581637961360254" />
-      <entry key="M10" value="15.18722407919573" />
-      <entry key="M15" value="23.130985048086142" />
-      <entry key="M30" value="43.11408786854536" />
-      <entry key="H1" value="73.48111253765549" />
-      <entry key="H2" value="122.69199112050902" />
-      <entry key="H4" value="187.07636953324976" />
-      <entry key="D1" value="305.3707501694765" />
-      <entry key="W1" value="337.21946669372005" />
+      <entry key="MS100" value="1.0000286719588993" />
+      <entry key="MS500" value="1.1234501076806716" />
+      <entry key="S2" value="1.5927517819894614" />
+      <entry key="S5" value="1.8112415751383024" />
+      <entry key="S10" value="1.9030388406609462" />
+      <entry key="S30" value="2.260815285090314" />
+      <entry key="S60" value="3.0359401439202074" />
+      <entry key="M2" value="4.1588681505646585" />
+      <entry key="M5" value="7.51345863874931" />
+      <entry key="M10" value="14.243236272180877" />
+      <entry key="M15" value="21.247789081041" />
+      <entry key="M30" value="41.731607754330476" />
+      <entry key="H1" value="76.21039761029552" />
+      <entry key="H2" value="130.73062031230268" />
+      <entry key="H4" value="202.19887248432005" />
+      <entry key="D1" value="337.77678609315046" />
+      <entry key="W1" value="375.175644859144" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.3924141957645397E-4" />
-      <entry key="MS500" value="0.23187208199810733" />
-      <entry key="S2" value="1.41322776970925" />
-      <entry key="S5" value="2.600115975945694" />
-      <entry key="S10" value="3.997978509974826" />
-      <entry key="S30" value="10.415134499461017" />
-      <entry key="S60" value="17.92838374010463" />
-      <entry key="M2" value="26.01886228315836" />
-      <entry key="M5" value="42.87382952749699" />
-      <entry key="M10" value="87.07778081139304" />
-      <entry key="M15" value="137.55333407121225" />
-      <entry key="M30" value="270.3960877044072" />
-      <entry key="H1" value="484.79455639499025" />
-      <entry key="H2" value="831.1337486863838" />
-      <entry key="H4" value="1262.4950474227837" />
-      <entry key="D1" value="2021.9799962283757" />
-      <entry key="W1" value="2222.6835430561187" />
+      <entry key="MS100" value="4.985415709200617E-4" />
+      <entry key="MS500" value="0.23955538504917837" />
+      <entry key="S2" value="1.3184830818027866" />
+      <entry key="S5" value="2.1217858107897096" />
+      <entry key="S10" value="2.524249470327535" />
+      <entry key="S30" value="3.81489707403237" />
+      <entry key="S60" value="6.62538414974751" />
+      <entry key="M2" value="11.14326171709467" />
+      <entry key="M5" value="29.1802817862592" />
+      <entry key="M10" value="67.23847164982197" />
+      <entry key="M15" value="106.92369900264244" />
+      <entry key="M30" value="229.17555955901412" />
+      <entry key="H1" value="453.8717878631551" />
+      <entry key="H2" value="825.3071258462987" />
+      <entry key="H4" value="1301.908977223612" />
+      <entry key="D1" value="2175.8867327055523" />
+      <entry key="W1" value="2412.8835837709394" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -145,7 +149,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "copilot.chat.legacySessionMetadata.migrated": "true",
-    "git-widget-placeholder": "7d9db368",
+    "git-widget-placeholder": "b012e2cb",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Volumes/MacOS-Ext/Development/SamiLang/sami-lang-compiler-rust-version",
     "node.js.detected.package.eslint": "true",
@@ -160,7 +164,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Cargo.Test lexer_tests">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lexer" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cargo.Run">
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package sami-lang-compiler-rust-version --bin sami-lang-compiler-rust-version" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -248,6 +257,7 @@
       </method>
     </configuration>
     <configuration name="Test lexer_tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="buildProfileId" value="dev" />
       <option name="command" value="test --package sami-lang-compiler-rust-version --bin sami-lang-compiler-rust-version -- lexer::lexer_tests" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
@@ -288,7 +298,7 @@
       <workItem from="1631035282678" duration="2000" />
       <workItem from="1785951880631" duration="8676000" />
       <workItem from="1786027248658" duration="8496000" />
-      <workItem from="1786093296834" duration="11128000" />
+      <workItem from="1786093296834" duration="13762000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-use crate::error::LexError;
+use crate::lexer::error::LexError;
 use crate::lexer::token::{KEYWORDS, Token};
 
 // TODO: add line numbers and file names to easily report errors context
